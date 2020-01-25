@@ -22,32 +22,32 @@ Output Format
 
 Print the whole journey of the snake by outputting the time at which the snake is found in each specific part of the area. Have a look at the sample outputs for better understanding.
 
-Sample Input 0
+Sample Input 0 <br>
 
-2
-e
-1 0 
+2 <br>
+e <br>
+1 0 <br>
 
-Sample Output 0
+Sample Output 0 <br>
 
-4 3
-1 2
+4 3 <br>
+1 2 <br>
 
-Explanation 0
+Explanation 0 <br>
 <img src="../images/snake_grid_1.png">
 
-Sample Input 1
+Sample Input 1 <br>
 
-4
-n
-0 0 
+4 <br>
+n <br>
+0 0 <br>
 
-Sample Output 1
+Sample Output 1 <br>
 
-1 2 3 4 
-8 7 6 5
-9 10 11 12
-16 15 14 13
+1 2 3 4 <br>
+8 7 6 5 <br>
+9 10 11 12 <br>
+16 15 14 13 <br>
 
-Explanation 1
+Explanation 1 <br>
 <img src="../images/snake_grid_2.png">
