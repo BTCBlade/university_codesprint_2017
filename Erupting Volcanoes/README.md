@@ -5,7 +5,7 @@ It is difficult for them to analyze the effects on only some islands so they dec
 
 According to their studies, the lava has a maximum effect in the place of the volcanic eruption, and this effect seems to decrease the further it gets from the eruption place. More specifically, for a volcano located in a cell  with power , first it affects the cell  with power , then it affects yet-unaffected cells adjacent to recently affected cells with power equal to the last power decreased by , and continues this process until the power becomes . Please refer to the below image for the illustration of this process:
 
-<img src="evolcano_img1.jpg">
+<img src="../images/evolcano_img1.jpg">
 
 Given the size of the study area and the coordinates of the erupting volcanoes, find the maximum total effect value of the lava across all cells in the experiment's area.
 
@@ -34,7 +34,7 @@ Sample Output 0 <br>
 
 Explanation 0 <br>
 
-<img src="evolcano_img2.png">
+<img src="../images/evolcano_img2.png">
 
 Sample Input 1 <br>
 
@@ -48,4 +48,4 @@ Sample Output 1 <br>
 4 <br>
 Explanation 1 <br>
 
-<img src="evolcano_img3.png">
+<img src="../images/evolcano_img3.png">
