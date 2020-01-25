@@ -56,7 +56,7 @@ Explanation 0 <br>
 Query 1:
 Bob will move king from  to  or . Then, the second player will have to move one of the kings in the corner (up-left) and Bob will move the second king to the corner.
 
-<img src="../images/bobs_game_img2">
+<img src="../images/bobs_game_img2.png">
 
 Query 2:
 In this case, Bob has no move.
