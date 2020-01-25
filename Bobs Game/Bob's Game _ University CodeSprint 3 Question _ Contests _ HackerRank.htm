@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+<!-- saved from url=(0080)https://www.hackerrank.com/contests/university-codesprint-3/challenges/bobs-game -->
+<html lang="en" class=" mod_js mod_flexbox mod_flexboxlegacy mod_canvas mod_canvastext mod_webgl mod_no-touch mod_geolocation mod_history mod_draganddrop mod_rgba mod_hsla mod_multiplebgs mod_backgroundsize mod_borderimage mod_borderradius mod_boxshadow mod_textshadow mod_opacity mod_cssanimations mod_csscolumns mod_cssgradients mod_cssreflections mod_csstransforms mod_csstransforms3d mod_csstransitions mod_fontface mod_generatedcontent mod_video mod_audio mod_applicationcache mod_svg mod_inlinesvg mod_smil mod_svgclippaths mod_csscalc mod_fullscreen mod_cssresize mod_no-ie8compat"><script id="twitter-wjs" src="./Bob&#39;s Game _ University CodeSprint 3 Question _ Contests _ HackerRank_files/widgets.js"></script><script src="./Bob&#39;s Game _ University CodeSprint 3 Question _ Contests _ HackerRank_files/bizible.js"></script><script type="text/javascript" async="" src="./Bob&#39;s Game _ University CodeSprint 3 Question _ Contests _ HackerRank_files/filepicker.js"></script><script type="text/javascript" async="" src="./Bob&#39;s Game _ University CodeSprint 3 Question _ Contests _ HackerRank_files/ga.js"></script><script src="./Bob&#39;s Game _ University CodeSprint 3 Question _ Contests _ HackerRank_files/nr-1158.min.js"></script><script async="" src="./Bob&#39;s Game _ University CodeSprint 3 Question _ Contests _ HackerRank_files/gtm.js"></script><script type="text/javascript">window["_gaUserPrefs"] = { ioo : function() { return true; } }</script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript">
+        function set_manifest(manifest) {
+            HR.MANIFEST = manifest;
+        }
+    </script>
+    <script type="text/javascript">
+  window.PRODUCT_NAMESPACE = 'hackerrank'
+  window.APP_METRIC_TRACKING_ENABLED = false
+  window.PERF_METRICS = {
+    tracked_initial_view_load_tti: {},
+    tracked_view_load_tti: {}
+  }
+    if ((window.PRODUCT_NAMESPACE == 'hackerrank' || window.PRODUCT_NAMESPACE == 'hackerrankx') && (Math.floor(Math.random() * 2) + 1) == 1) {
+      window.APP_METRIC_TRACKING_ENABLED = true
+    }
+</script>
+
+<script type="text/javascript">
+  window.HR = window.HR || {}
+  HR.development = false
+  HR.production = true
+  HR.DESIGN_SUBDOMAIN_PREFIX = 'design'
+  HR.DESIGN_DOMAIN = 'hrcdn.net'
+  HR.USE_CURRENT_HOST_AS_DESIGN_DOMAIN = ''
+</script>
+
+<!-- jsCookies -->
+  <script type="text/javascript">
+    /*!
+ * JavaScript Cookie v2.1.2
+ * https://github.com/js-cookie/js-cookie
+ *
+ * Copyright 2006, 2015 Klaus Hartl & Fagner Brack
+ * Released under the MIT license
+ */
+if(function(factory){if("function"==typeof define&&define.amd)define(factory);else if("object"==typeof exports)module.exports=factory();else{var OldCookies=window.Cookies,api=window.Cookies=factory();api.noConflict=function(){return window.Cookies=OldCookies,api}}}(function(){function extend(){for(var i=0,result={};i<arguments.length;i++){var attributes=arguments[i];for(var key in attributes)result[key]=attributes[key]}return result}function init(converter){function api(key,value,attributes){var result;if("undefined"!=typeof document){if(arguments.length>1){if(attributes=extend({path:"/"},api.defaults,attributes),"number"==typeof attributes.expires){var expires=new Date;expires.setMilliseconds(expires.getMilliseconds()+864e5*attributes.expires),attributes.expires=expires}try{result=JSON.stringify(value),/^[\{\[]/.test(result)&&(value=result)}catch(e){}return value=converter.write?converter.write(value,key):encodeURIComponent(String(value)).replace(/%(23|24|26|2B|3A|3C|3E|3D|2F|3F|40|5B|5D|5E|60|7B|7D|7C)/g,decodeURIComponent),key=encodeURIComponent(String(key)),key=key.replace(/%(23|24|26|2B|5E|60|7C)/g,decodeURIComponent),key=key.replace(/[\(\)]/g,escape),document.cookie=[key,"=",value,attributes.expires&&"; expires="+attributes.expires.toUTCString(),attributes.path&&"; path="+attributes.path,attributes.domain&&"; domain="+attributes.domain,attributes.secure?"; secure":""].join("")}key||(result={});for(var cookies=document.cookie?document.cookie.split("; "):[],rdecode=/(%[0-9A-Z]{2})+/g,i=0;i<cookies.length;i++){var parts=cookies[i].split("="),cookie=parts.slice(1).join("=");'"'===cookie.charAt(0)&&(cookie=cookie.slice(1,-1));try{var name=parts[0].replace(rdecode,decodeURIComponent);if(cookie=converter.read?converter.read(cookie,name):converter(cookie,name)||cookie.replace(rdecode,decodeURIComponent),this.json)try{cookie=JSON.parse(cookie)}catch(e){}if(key===name){result=cookie;break}key||(result[name]=cookie)}catch(e){}}return result}}return api.set=api,api.get=function(key){return api(key)},api.getJSON=function(){return api.apply({json:!0},[].slice.call(arguments))},api.defaults={},api.remove=function(key,attributes){api(key,"",extend(attributes,{expires:-1}))},api.withConverter=init,api}return init(function(){})}),"undefined"==typeof jsCookies&&"undefined"!=typeof Cookies)var jsCookies={get:function(c_name){return Cookies.get(c_name)},set:function(c_name,value,expiredays,expirehours,expiremins,expiresecs,options){var exdate=new Date;exdate.setDate(exdate.getDate()+(expiredays||0)),exdate.setHours(exdate.getHours()+(expirehours||0)),exdate.setMinutes(exdate.getMinutes()+(expiremins||0)),exdate.setSeconds(exdate.getSeconds()+(expiresecs||0));var set_expire_time=!(null==expiredays&&null==expiresecs&&null==expiremins&&null==expirehours),config=options||{};set_expire_time&&(config.expires=exdate),Cookies.set(c_name,value,config)},check:function(c_name){return!!Cookies.get(c_name)},destroy:function(c_name){Cookies.remove(c_name)}};
+//# sourceMappingURL=https://staging.hackerrank.net/assets/sourcemaps/jscookies-88896efbb43b944a89475f0d11049724.js.map
+  </script>
+
+<script type="text/javascript">
+  !function(){function getRandRange(min,max){return parseInt(Math.random()*(max-min))+min}function getRandChar(){var offset=getRandRange(0,35);return offset>25?(offset-26).toString():String.fromCharCode(97+offset)}function makeId(length){for(var text="",i=0;length>i;i++)text+=getRandChar();return text}function setSessionId(){key="session_id";var session_key=jsCookies.get(key);session_key?jsCookies.set(key,session_key,null,2,null,null,{secure:!0}):(epoch=(new Date).getTime(),rand_id=makeId(8),jsCookies.set(key,rand_id+"-"+epoch.toString(),null,2,null,null,{secure:!0})),setTimeout(setSessionId,6e4)}setSessionId()}();
+//# sourceMappingURL=https://staging.hackerrank.net/assets/sourcemaps/set_session-51b03f337d09782da69729476d69c39d.js.map
+</script>
+
+<!-- DNS Prefetch -->
+<link rel="dns-prefetch" href="https://hrcdn.net/">
+<link rel="dns-prefetch" href="https://d3keuzeb2crhkn.cloudfront.net/">
+<link rel="dns-prefetch" href="https://notifications.hackerrank.com/">
+<link rel="dns-prefetch" href="https://metrics.hackerrank.com/">
+<link rel="preconnect" href="https://sentry.io/">
+<link rel="dns-prefetch" href="https://sentry.io/">
+
+<!-- use the latest IE browser -->
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+<!-- App Icon for iOS Devices -->
+<link rel="apple-touch-icon-precomposed" href="https://hrcdn.net/hackerrank/assets/apple-touch-icon-precomposed-5e8e592a0a1a387a1185089d13d65637.png">
+
+<!-- favicon -->
+<link rel="shortcut icon" type="image/png" href="https://hrcdn.net/hackerrank/assets/favicon-95dc36c7e91ed5f1841649303c027edb.png">
+
+<!-- generating meta tags -->
+
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"46ce49ae81","applicationID":"1292558","transactionName":"c1ddEBFcWl1WQRpeWF1dHA0NV1NJ","queueTime":0,"applicationTime":39,"agent":""}</script>
+<script>(window.NREUM||(NREUM={})).loader_config={xpid:"VgIDVlRWGwICXVNXAgk=",licenseKey:"46ce49ae81",applicationID:"1292558"};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(20),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(21),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),c.xhrWrappable&&t(10),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(9),s=t(8),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof x&&(this.bstStart=y.now())}),o.on(w,function(t,n){var e=t[0];e instanceof x&&i("bst",[e,n,this.bstStart,y.now()])}),a.on(m,function(t,n,e){this.bstStart=y.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,y.now(),this.bstType])}),s.on(m,function(){this.bstStart=y.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,y.now(),"requestAnimationFrame"])}),o.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),o.on(g+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t("wrap-function")(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){function r(t,n,e){var r=t[n];"function"==typeof r&&(t[n]=function(){var t=i(arguments),n={};o.emit(e+"before-start",[t],n);var a;n[m]&&n[m].dt&&(a=n[m].dt);var s=r.apply(this,t);return o.emit(e+"start",[t,a],s),s.then(function(t){return o.emit(e+"end",[null,t],s),t},function(t){throw o.emit(e+"end",[t],s),t})})}var o=t("ee").get("fetch"),i=t(21),a=t(20);n.exports=o;var s=window,c="fetch-",f=c+"body-",u=["arrayBuffer","blob","json","text","formData"],d=s.Request,l=s.Response,p=s.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,n){r(d[h],n,f),r(l[h],n,f)}),r(s,"fetch",c),o.on(c+"end",function(t,n){var e=this;if(n){var r=n.headers.get("content-length");null!==r&&(e.rxSize=r),o.emit(c+"done",[null,n],e)}else o.emit(c+"done",[t],e)}))},{}],7:[function(t,n,e){var r=t("ee").get("history"),o=t("wrap-function")(r);n.exports=r;var i=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;i&&i.pushState&&i.replaceState&&(a=i),o.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,n,e){var r=t("ee").get("raf"),o=t("wrap-function")(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],9:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t("wrap-function")(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],10:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",s)}function i(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,O.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];n.exports=u;var x=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,n,e){function r(t){if(!i(t))return null;var n=window.NREUM;if(!n.loader_config)return null;var e=(n.loader_config.accountID||"").toString()||null,r=(n.loader_config.agentID||"").toString()||null,s=(n.loader_config.trustKey||"").toString()||null;if(!e||!r)return null;var c=a.generateCatId(),f=a.generateCatId(),u=Date.now(),d=o(c,f,u,e,r,s);return{header:d,guid:c,traceId:f,timestamp:u}}function o(t,n,e,r,o,i){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var s={v:[0,1],d:{ty:"Browser",ac:r,ap:o,id:t,tr:n,ti:e}};return i&&r!==i&&(s.d.tk=i),btoa(JSON.stringify(s))}function i(t){var n=!1,e=!1,r={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(r=NREUM.init.distributed_tracing,e=!!r.enabled),e)if(t.sameOrigin)n=!0;else if(r.allowed_origins instanceof Array)for(var o=0;o<r.allowed_origins.length;o++){var i=s(r.allowed_origins[o]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){n=!0;break}}return e&&n}var a=t(18),s=t(13);n.exports={generateTracePayload:r,shouldGenerateTrace:i}},{}],12:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<p;r++)t.removeEventListener(l[r],this.listener,!1);n.aborted||(e.duration=s.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==n.status&&(n.status=0):a(this,t),e.cbTime=this.cbTime,d.emit("xhr-done",[t],t),c("xhr",[n,e,this.startTime]))}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return w(r)}function i(t,n){var e=f(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.parsedOrigin=f(n),t.sameOrigin=t.parsedOrigin.sameOrigin}function a(t,n){t.params.status=n.status;var e=o(n,t.lastSize);if(e&&(t.metrics.rxSize=e),t.sameOrigin){var r=n.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var s=t("loader");if(s.xhrWrappable){var c=t("handle"),f=t(13),u=t(11).generateTracePayload,d=t("ee"),l=["load","error","abort","timeout"],p=l.length,h=t("id"),m=t(16),w=t(15),v=window.XMLHttpRequest;s.features.xhr=!0,t(10),t(6),d.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,n.loadCaptureCalled=!1,t.addEventListener("load",function(e){a(n,t)},!1),m&&(m>34||m<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),d.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),d.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var e=u(this.parsedOrigin);e&&e.header&&(n.setRequestHeader("newrelic",e.header),this.dt=e)}),d.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=w(r);i&&(e.txSize=i)}this.startTime=s.now(),this.listener=function(t){try{"abort"!==t.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{d.emit("internal-error",[e])}catch(r){}}};for(var a=0;a<p;a++)n.addEventListener(l[a],this.listener,!1)}),d.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),d.on("xhr-load-added",function(t,n){var e=""+h(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),d.on("xhr-load-removed",function(t,n){var e=""+h(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),d.on("addEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&d.emit("xhr-load-added",[t[1],t[2]],n)}),d.on("removeEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&d.emit("xhr-load-removed",[t[1],t[2]],n)}),d.on("fn-start",function(t,n,e){n instanceof v&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=s.now()))}),d.on("fn-end",function(t,n){this.xhrCbStart&&d.emit("xhr-cb-time",[s.now()-this.xhrCbStart,this.onload,n],n)}),d.on("fetch-before-start",function(t){var n,e=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url&&(n=t[0].url),n&&(this.parsedOrigin=f(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var r=u(this.parsedOrigin);if(r&&r.header){var o=r.header;if("string"==typeof t[0]){var i={};for(var a in e)i[a]=e[a];i.headers=new Headers(e.headers||{}),i.headers.set("newrelic",o),this.dt=r,t.length>1?t[1]=i:t.push(i)}else t[0]&&t[0].headers&&(t[0].headers.append("newrelic",o),this.dt=r)}})}},{}],13:[function(t,n,e){var r={};n.exports=function(t){if(t in r)return r[t];var n=document.createElement("a"),e=window.location,o={};n.href=t,o.port=n.port;var i=n.href.split("://");!o.port&&i[1]&&(o.port=i[1].split("/")[0].split("@").pop().split(":")[1]),o.port&&"0"!==o.port||(o.port="https"===i[0]?"443":"80"),o.hostname=n.hostname||e.hostname,o.pathname=n.pathname,o.protocol=i[0],"/"!==o.pathname.charAt(0)&&(o.pathname="/"+o.pathname);var a=!n.protocol||":"===n.protocol||n.protocol===e.protocol,s=n.hostname===document.domain&&n.port===e.port;return o.sameOrigin=a&&(!n.hostname||s),"/"===o.pathname&&(r[t]=o),o}},{}],14:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(20),s=t(21),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t,n){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,n])}},{}],15:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],16:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],17:[function(t,n,e){function r(t,n){var e=t.getEntries();e.forEach(function(t){"first-paint"===t.name?a("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&a("timing",["fcp",Math.floor(t.startTime)])})}function o(t){if(t instanceof c&&!u){var n,e=Math.round(t.timeStamp);n=e>1e12?Date.now()-e:s.now()-e,u=!0,a("timing",["fi",e,{type:t.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var i,a=t("handle"),s=t("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){i=new PerformanceObserver(r);try{i.observe({entryTypes:["paint"]})}catch(f){}}if("addEventListener"in document){var u=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(t){document.addEventListener(t,o,!1)})}}},{}],18:[function(t,n,e){function r(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(n=r.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<i.length;s++)o=i[s],"x"===o?a+=t().toString(16):"y"===o?(o=3&t()|8,a+=o.toString(16)):a+=o;return a}function o(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&Uint8Array&&(n=r.getRandomValues(new Uint8Array(31)));for(var o=[],i=0;i<16;i++)o.push(t().toString(16));return o.join("")}n.exports={generateUuid:r,generateCatId:o}},{}],19:[function(t,n,e){function r(t,n){if(!o)return!1;if(t!==o)return!1;if(!n)return!0;if(!i)return!1;for(var e=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==e[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}n.exports={agent:o,version:i,match:r}},{}],20:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],21:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],22:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=m(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([x,e,r,a]),a}}function p(t,n){g[t]=m(t).concat(n)}function h(t,n){var e=g[t];if(e)for(var r=0;r<e.length;r++)e[r]===n&&e.splice(r,1)}function m(t){return g[t]||[]}function w(t){return d[t]=d[t]||o(e)}function v(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var g={},y={},x={on:p,addEventListener:p,removeEventListener:h,emit:e,get:w,listeners:m,context:n,buffer:v,abort:a,aborted:!1};return x}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(20),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!E++){var t=b.info=NREUM.info,n=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=p.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===p.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(20),u=t("ee"),d=t(19),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var g=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1158.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:g,features:{},xhrWrappable:x,userAgent:d};t(14),t(17),p[h]?(p[h]("DOMContentLoaded",i,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",o),l[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,O=t(22)},{}],"wrap-function":[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(21),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}]},{},["loader",2,12,4,3]);</script><style>@media print {#ghostery-purple-box {display:none !important}}</style>
+
+<meta name="description" content="Find the number of winning moves of Bob in a game on a generalized chessboard.">
+<meta property="og:title" content="Solve Bob&#39;s Game">
+<meta property="og:image" content="https://hrcdn.net/og/default.jpg">
+<meta property="og:description" content="Find the number of winning moves of Bob in a game on a generalized chessboard. Solving code challenges on HackerRank is one of the best ways to prepare for programming interviews.">
+<meta property="og:url" content="https://www.hackerrank.com/contests/university-codesprint-3/challenges/bobs-game">
+<meta property="og:site_name" content="HackerRank">
+<meta property="og:type" content="hackerrank:challenge">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@hackerrank">
+<meta name="twitter:url" content="https://www.hackerrank.com">
+<meta name="twitter:title" content="HackerRank">
+<meta property="fb:app_id" content="347499128655783">
+
+<link href="https://www.hackerrank.com/contests/university-codesprint-3/challenges/bobs-game/" rel="canonical"><!-- ends meta tags generation -->
+
+<!-- CSRF Token -->
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="dYusf1usRwBgOI9CG220B+6acdQbhuBik/fEO5VrAUnfFTeNUBm4zaK/AhnRWnFnhA0i9HXjQgurDGcUHn9dNw==">
+
+  <link rel="stylesheet" media="all" href="./Bob&#39;s Game _ University CodeSprint 3 Question _ Contests _ HackerRank_files/hackerrank_libraries-21fce5f00a5704ab97ea6e29f618ca7f.css">
+  <link rel="stylesheet" media="all" href="./Bob&#39;s Game _ University CodeSprint 3 Question _ Contests _ HackerRank_files/hackerrank-core2-544ce370957cf291e278582bbca1f8c7.css">
+  <link rel="stylesheet" media="all" href="./Bob&#39;s Game _ University CodeSprint 3 Question _ Contests _ HackerRank_files/dashboard-a6839512afddeb30aefee5ffef4396b6.css">
+  <link rel="stylesheet" media="all" href="./Bob&#39;s Game _ University CodeSprint 3 Question _ Contests _ HackerRank_files/theme_m_patch-b0f413f3b8f39c3a93e8e63816584c94.css">
+
+
+<!-- Sentry -->
+<!--
+CDN distribution of raven.js looks for requirejs, but the module is anonymous.
+If we are using require.js and loading an anonymous module without require.js, it raises an error.
+https://github.com/getsentry/raven-js/issues/635
+https://github.com/getsentry/raven-js/issues/97
+-->
+  <script src="./Bob&#39;s Game _ University CodeSprint 3 Question _ Contests _ HackerRank_files/raven-842e0dd9ae7063befec00a4841fc2792.js" id="raven" crossorigin="anonymous" async="async"></script>
+  <script type="text/javascript">
+    (function(window, queue, loaded, script) {
+
+      var raven_user_context = {
+      }
+      var raven_extra_context = {
+        loadTimestamp: 1579971046,
+        assetUrl: 'https://hrcdn.net',
+        cdnUrl: ''
+      }
+
+        raven_extra_context.mixpanel_token = '5c8ba2ab-7aa5-4612-812c-bc7c6f405823'
+
+      window.onerror = function e(message, file, lineNo, columnNo, error) {
+          if (loaded) return;
+          queue.push([message, file, lineNo, columnNo, error]);
+      };
+
+      window.onunhandledrejection = function e(error) {
+          if (loaded) return;
+          queue.push([
+              error.reason,
+          ]);
+      };
+
+      script.onreadystatechange = script.onload = function() {
+          if (loaded) return;
+          loaded = true;
+
+          Raven.config("https://6b2d52b23d5a4dd4bc44330335327c04@sentry.io/234162", {
+              release: '-',
+              ignoreUrls: [/cdn\.userty\.com/],
+              ignoreErrors: [
+                '$ is not defined',
+                'Error: Connection is disposed',
+                'Connection got disposed',
+                'A network error occurred',
+                'Model is disposed!',
+                'Invalid start index',
+              ],
+          }).install();
+          Raven.setUserContext(raven_user_context)
+          Raven.setExtraContext(raven_extra_context)
+          window.onunhandledrejection = function e(error) {
+              Raven.captureException(error.reason, {
+                  extra: {
+                      type: error.type,
+                  },
+              });
+          };
+
+          queue.forEach(function(error) {
+              Raven.captureException(error[4] || error[0], {
+                  extra: {
+                      file: error[1],
+                      line: error[2],
+                      col: error[3],
+                  },
+              });
+          });
+      };
+    }(window, [], false, document.getElementById('raven')));
+  </script>
+
+<!-- Google Analyitics Init -->
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', "UA-45092266-1"]);
+    _gaq.push(['_trackPageview']);
+    _gaq.push(['_gat._anonymizeIp']);
+    _gaq.push(['_setCampSourceKey', 'utm_source']);
+    _gaq.push(['_setCampMediumKey', 'utm_medium']);
+    _gaq.push(['_setCampContentKey', 'utm_keyword']);
+    _gaq.push(['_setCampTermKey', 'utm_keyword']);
+    _gaq.push(['_setCampNameKey', 'utm_campaign']);
+</script>
+
+<!-- Mixpanel Stub -->
+<script type="text/javascript">
+  window.mixpanel = window.mixpanel || [];
+  var attrs = "disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");
+  for (var attribute in attrs) {
+    mixpanel[attrs[attribute]] = function () {};
+  }
+</script>
+
+<!-- Heap Analytics Init -->
+<script type="text/javascript">
+    var heap = heap || [];
+</script>
+
+<script type="text/javascript">
+  (function(h) {
+    window.hr_metrics = h;
+    if (!h.loaded) {
+      var a = ['track', 'batch_track', 'app_track', 'externalService', 'init', 'batch_track_record', 'track_dwell_time', 'set_navigation_data'];
+      for (var i = 0; i < a.length; i++) {
+        if (!h[a[i]]) {h[a[i]] = function() {};}
+      }
+    }
+  })(window.hr_metrics || {});
+</script>
+
+<script type="text/javascript">
+    /**
+     * Protect window.console method calls, e.g. console is not defined on IE
+     * unless dev tools are open, and IE doesn't define console.debug
+     */
+(function() {
+    if (!window.console) {
+      window.console = {};
+    }
+    var m = ["log", "info", "warn", "error", "debug", "trace", "dir", "group", "groupCollapsed", "groupEnd", "time", "timeEnd", "profile", "profileEnd", "dirxml", "assert", "count", "markTimeline", "timeStamp", "clear"];
+    // define undefined methods as noops to prevent errors
+    for (var i = 0; i < m.length; i++) {
+        if (!window.console[m[i]]) {
+            window.console[m[i]] = function() {};
+        }
+    }
+})();
+</script>
+
+
+  <script type="text/javascript">
+    var pusher_app_key = 'a280047e3b323ccb1b65';
+  </script>
+
+<!-- Linkedin Insights -->
+
+
+<script>
+  dataLayer = [];
+</script>
+
+<!-- Google Tag Manager #1 -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer', 'GTM-5FXW96J');</script>
+<!-- End Google Tag Manager #1 -->
+
+
+    <!-- General Information -->
+    <title>Bob's Game | University CodeSprint 3 Question | Contests | HackerRank</title>
+
+    <!--  TODO : This need to be configured from configuration file -->
+      <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="https://hrcdn.net/hackerrank/assets/compound/challenge-views-fcf989000118411c2eb3547a5dd9ff8b.js" src="./Bob&#39;s Game _ University CodeSprint 3 Question _ Contests _ HackerRank_files/challenge-views-fcf989000118411c2eb3547a5dd9ff8b.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="https://hrcdn.net/hackerrank/assets/codemirror_basic-b0da76e3e366336f599c6741d721dd67.js" src="./Bob&#39;s Game _ University CodeSprint 3 Question _ Contests _ HackerRank_files/codemirror_basic-b0da76e3e366336f599c6741d721dd67.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="https://hrcdn.net/hackerrank/assets/codemirror/mode/clike/clike-730a8140c63a08831b4b7153287a6f04.js" src="./Bob&#39;s Game _ University CodeSprint 3 Question _ Contests _ HackerRank_files/clike-730a8140c63a08831b4b7153287a6f04.js"></script><!--<base href="https://www.hackerrank.com/">--><base href=".">
+
+    <script type="text/javascript">
+      var HR;
+      HR = window.HR || {};
+      HR.PREFETCH_DATA = {"metadata":{"asset_path":"https://hrcdn.net/hackerrank/assets","asset_host":"https://hrcdn.net","asset_host_path":"https://hrcdn.net/hackerrank","filepicker_key":"ApehXMbvXTWqWab7OmMr9z","pubsub_host":"https://pubsub.hackerrank.com","release_version":"0","landing_contest_slug":"university-codesprint-3","current_contest_namespace":"/contests/university-codesprint-3","using_contest_namespace":true},"slugs":{"university-codesprint-3":{"type":"contest"}},"contest":{"id":20467,"name":"University CodeSprint 3","slug":"university-codesprint-3","created_at":"2017-08-28T09:35:53.000Z","updated_at":"2017-10-04T12:57:58.000Z","starttime":"2017-09-29T16:00:00.000Z","endtime":"2017-10-01T16:00:00.000Z","timezone":"PST","homepage":null,"tagline":null,"description":"Join University CodeSprint 3 and represent your school to prove how well students and graduates from your school can code! Win cash prizes, champion shirts.","homepage_background_color":null,"notification":null,"template_id":638,"expose_stats":null,"public":true,"team_event":false,"rating_category":"Algorithms","is_rating_updated":true,"leaderboard_backend":null,"leaderboard_format":"","primary_track_id":3,"college_public":true,"rated":true,"is_multi_round":false,"parent_contest_id":null,"primary_tag_id":3081,"started":true,"ended":true,"epoch_endtime":1506873600,"epoch_starttime":1506700800,"time_left":-73097446.27690509,"hide_difficulty":null,"has_tracks":null,"archived":true,"leaderboard_type":"country","kind":"","leaderboard_freeze_time":null,"show_penalty":true,"track":{"id":3,"name":"Algorithms","slug":"algorithms","priority":14,"descriptions":"The true test of problem solving: when one realizes that time and memory aren't infinite.\n","rewards_system_enabled":true},"hide_navigation":null,"contest_broadcast":null,"hide_leaderboard":null,"hide_submissions":null,"leaderboard_out_of_sync":null,"leaderboard_out_of_sync_message":null,"challenges_count":7,"show_participants_info":null,"custom_leaderboard_column_name":null,"disable_forum":null,"disable_fsi":null,"has_codesprint_reg_page":null,"hidden":null,"comment_live_sync":null,"company_associated_contest":null,"limited_participants":null,"leaderboard_broadcast_message":null,"qualification_rule_type":null,"qualification_rule_value":0,"qualification_rule_msg":null,"migration_status":null,"migration_disabled":null,"testers_contest":null,"time_limited_contest":false,"hacker_timelimit":null,"school_leaderboard_enabled":true,"organization_type":"company","organization_name":"HackerRank","effective_time_left":-73097446.27942598,"effective_epoch_endtime":1506873600},"messages":[],"profile":{},"timestamp":1579971046,"tracks":[{"id":24,"slug":"tutorials","name":"Tutorials","chapters":[{"id":146,"name":"30 Days of Code","slug":"30-days-of-code","hidden":false},{"id":147,"name":"10 Days of Statistics","slug":"10-days-of-statistics","hidden":false},{"id":148,"name":"10 Days of Javascript","slug":"10-days-of-javascript","hidden":false}],"selected":2},{"id":3,"slug":"algorithms","name":"Algorithms","chapters":[{"id":43,"name":"Warmup","slug":"warmup","hidden":false},{"id":108,"name":"Implementation","slug":"implementation","hidden":false},{"id":34,"name":"Strings","slug":"strings","hidden":false},{"id":38,"name":"Sorting","slug":"arrays-and-sorting","hidden":false},{"id":36,"name":"Search","slug":"search","hidden":false},{"id":33,"name":"Graph Theory","slug":"graph-theory","hidden":false},{"id":59,"name":"Greedy","slug":"greedy","hidden":false},{"id":35,"name":"Dynamic Programming","slug":"dynamic-programming","hidden":false},{"id":151,"name":"Constructive Algorithms","slug":"constructive-algorithms","hidden":false},{"id":30,"name":"Bit Manipulation","slug":"bit-manipulation","hidden":false},{"id":153,"name":"Recursion","slug":"recursion","hidden":false},{"id":47,"name":"Game Theory","slug":"game-theory","hidden":false},{"id":29,"name":"NP Complete","slug":"np-complete-problems","hidden":false},{"id":161,"name":"Debugging","slug":"algo-debugging","hidden":false}],"selected":2},{"id":17,"slug":"data-structures","name":"Data Structures","chapters":[{"id":134,"name":"Arrays","slug":"arrays","hidden":false},{"id":39,"name":"Linked Lists","slug":"linked-lists","hidden":false},{"id":96,"name":"Trees","slug":"trees","hidden":false},{"id":119,"name":"Balanced Trees","slug":"balanced-trees","hidden":false},{"id":97,"name":"Stacks","slug":"stacks","hidden":false},{"id":98,"name":"Queues","slug":"queues","hidden":false},{"id":99,"name":"Heap","slug":"heap","hidden":false},{"id":100,"name":"Disjoint Set","slug":"disjoint-set","hidden":false},{"id":113,"name":"Multiple Choice","slug":"multiple-choice","hidden":false},{"id":118,"name":"Trie","slug":"trie","hidden":false},{"id":32,"name":"Advanced","slug":"data-structures","hidden":false}],"selected":2},{"id":22,"slug":"mathematics","name":"Mathematics","chapters":[{"id":109,"name":"Fundamentals","slug":"fundamentals","hidden":false},{"id":52,"name":"Number Theory","slug":"number-theory","hidden":false},{"id":51,"name":"Combinatorics","slug":"combinatorics","hidden":false},{"id":55,"name":"Algebra","slug":"algebra","hidden":false},{"id":54,"name":"Geometry","slug":"geometry","hidden":false},{"id":53,"name":"Probability","slug":"probability","hidden":false},{"id":128,"name":"Linear Algebra Foundations","slug":"linear-algebra-foundations","hidden":false}],"selected":2},{"id":27,"slug":"c","name":"C","chapters":[{"id":154,"name":"Introduction","slug":"c-introduction","hidden":false},{"id":155,"name":"Conditionals and Loops","slug":"c-conditionals-and-loops","hidden":false},{"id":156,"name":"Arrays and Strings","slug":"c-arrays-and-strings","hidden":false},{"id":157,"name":"Functions","slug":"c-functions","hidden":false},{"id":158,"name":"Structs and Enums","slug":"c-structs-and-enums","hidden":false}],"selected":2},{"id":2,"slug":"ai","name":"Artificial Intelligence","chapters":[{"id":8,"name":"Bot Building","slug":"ai-introduction","hidden":false},{"id":9,"name":"A* Search","slug":"astar-search","hidden":false},{"id":10,"name":"Alpha Beta Pruning","slug":"alpha-beta-pruning","hidden":false},{"id":14,"name":"Combinatorial Search","slug":"combinatorial-search-theory","hidden":false},{"id":13,"name":"Games","slug":"richman-games","hidden":false},{"id":11,"name":"Statistics and Machine Learning","slug":"machine-learning","hidden":false},{"id":44,"name":"Digital Image Analysis","slug":"image-analysis","hidden":false},{"id":49,"name":"Natural Language Processing","slug":"nlp","hidden":false},{"id":129,"name":"Probability \u0026 Statistics - Foundations","slug":"statistics-foundations","hidden":false}],"selected":2},{"id":13,"slug":"cpp","name":"C++","chapters":[{"id":77,"name":"Introduction","slug":"cpp-introduction","hidden":false},{"id":76,"name":"Strings","slug":"cpp-strings","hidden":false},{"id":78,"name":"Classes","slug":"classes","hidden":false},{"id":116,"name":"STL","slug":"stl","hidden":false},{"id":127,"name":"Inheritance","slug":"inheritance","hidden":false},{"id":159,"name":"Debugging","slug":"cpp-debugging","hidden":false},{"id":152,"name":"Other Concepts","slug":"other-concepts","hidden":false}],"selected":2},{"id":15,"slug":"java","name":"Java","chapters":[{"id":80,"name":"Introduction","slug":"java-introduction","hidden":false},{"id":82,"name":"Strings","slug":"java-strings","hidden":false},{"id":83,"name":"BigNumber","slug":"bignumber","hidden":false},{"id":84,"name":"Data Structures","slug":"java-data-structure","hidden":false},{"id":85,"name":"Object Oriented Programming","slug":"oop","hidden":false},{"id":106,"name":"Exception Handling","slug":"handling-exceptions","hidden":false},{"id":136,"name":"Advanced","slug":"java-advanced","hidden":false}],"selected":2},{"id":12,"slug":"python","name":"Python","chapters":[{"id":73,"name":"Introduction","slug":"py-introduction","hidden":false},{"id":74,"name":"Basic Data Types","slug":"py-basic-data-types","hidden":false},{"id":75,"name":"Strings","slug":"py-strings","hidden":false},{"id":120,"name":"Sets","slug":"py-sets","hidden":false},{"id":121,"name":"Math","slug":"py-math","hidden":false},{"id":122,"name":"Itertools","slug":"py-itertools","hidden":false},{"id":123,"name":"Collections","slug":"py-collections","hidden":false},{"id":124,"name":"Date and Time","slug":"py-date-time","hidden":false},{"id":126,"name":"Errors and Exceptions","slug":"errors-exceptions","hidden":false},{"id":42,"name":"Classes","slug":"py-classes","hidden":false},{"id":125,"name":"Built-Ins","slug":"py-built-ins","hidden":false},{"id":87,"name":"Python Functionals","slug":"py-functionals","hidden":false},{"id":88,"name":"Regex and Parsing","slug":"py-regex","hidden":false},{"id":89,"name":"XML","slug":"xml","hidden":false},{"id":90,"name":"Closures and Decorators","slug":"closures-and-decorators","hidden":false},{"id":139,"name":"Numpy","slug":"numpy","hidden":false},{"id":160,"name":"Debugging","slug":"py-debugging","hidden":false}],"selected":2},{"id":14,"slug":"ruby","name":"Ruby","chapters":[{"id":72,"name":"Introduction","slug":"ruby-tutorials","hidden":false},{"id":86,"name":"Control Structures","slug":"control-structures","hidden":false},{"id":79,"name":"Arrays \u0026 Hashes","slug":"ruby-arrays","hidden":false},{"id":107,"name":"Enumerables","slug":"ruby-enumerables","hidden":false},{"id":112,"name":"Methods","slug":"ruby-methods","hidden":false},{"id":135,"name":"Strings","slug":"ruby-strings","hidden":false}],"selected":2},{"id":18,"slug":"sql","name":"SQL","chapters":[{"id":92,"name":"Basic Select","slug":"select","hidden":false},{"id":132,"name":"Advanced Select","slug":"advanced-select","hidden":false},{"id":95,"name":"Aggregation","slug":"aggregation","hidden":false},{"id":94,"name":"Basic Join","slug":"join","hidden":false},{"id":133,"name":"Advanced Join","slug":"advanced-join","hidden":false},{"id":143,"name":"Alternative Queries","slug":"alternative-queries","hidden":false}],"selected":2},{"id":16,"slug":"databases","name":"Databases","chapters":[{"id":91,"name":"Relational Algebra","slug":"relational-algebra","hidden":false},{"id":93,"name":"Indexes","slug":"indexes","hidden":false},{"id":117,"name":"OLAP","slug":"olap","hidden":false},{"id":101,"name":"Set and Algebra","slug":"set-and-algebra","hidden":false},{"id":130,"name":"NoSQL - XML, MapReduce","slug":"xpath-queries","hidden":false},{"id":131,"name":"Database Normalization","slug":"database-normalization","hidden":false}],"selected":2},{"id":21,"slug":"distributed-systems","name":"Distributed Systems","chapters":[{"id":103,"name":"Multiple Choice","slug":"distributed-mcq","hidden":false},{"id":104,"name":"Client Server","slug":"client-server","hidden":false},{"id":111,"name":"MapReduce Basics","slug":"mapreduce-basics","hidden":false}],"selected":2},{"id":6,"slug":"shell","name":"Linux Shell","chapters":[{"id":56,"name":"Bash","slug":"bash","hidden":false},{"id":57,"name":"Text Processing","slug":"textpro","hidden":false},{"id":114,"name":"Arrays in Bash","slug":"arrays-in-bash","hidden":false},{"id":115,"name":"Grep Sed Awk","slug":"grep-sed-awk","hidden":false}],"selected":2},{"id":5,"slug":"fp","name":"Functional Programming","chapters":[{"id":27,"name":"Introduction","slug":"intro","hidden":false},{"id":26,"name":"Recursion","slug":"fp-recursion","hidden":false},{"id":45,"name":"Functional Structures","slug":"ds","hidden":false},{"id":40,"name":"Memoization and DP","slug":"dp","hidden":false},{"id":50,"name":"Persistent Structures","slug":"persistent-ds","hidden":false},{"id":41,"name":"Ad Hoc","slug":"misc","hidden":false},{"id":46,"name":"Parsers","slug":"parsers","hidden":false},{"id":48,"name":"Interpreter and Compilers","slug":"compilers","hidden":false}],"selected":2},{"id":19,"slug":"regex","name":"Regex","chapters":[{"id":137,"name":"Introduction","slug":"re-introduction","hidden":false},{"id":141,"name":"Character Class","slug":"re-character-class","hidden":false},{"id":142,"name":"Repetitions","slug":"re-repetitions","hidden":false},{"id":140,"name":"Grouping and Capturing","slug":"grouping-and-capturing","hidden":false},{"id":144,"name":"Backreferences","slug":"backreferences","hidden":false},{"id":145,"name":"Assertions","slug":"assertions","hidden":false},{"id":138,"name":"Applications","slug":"re-applications","hidden":false}],"selected":2},{"id":26,"slug":"general-programming","name":"General Programming","chapters":[],"selected":2},{"id":20,"slug":"security","name":"Security","chapters":[{"id":102,"name":"Functions","slug":"functions","hidden":false},{"id":105,"name":"Terminology and Concepts","slug":"concepts","hidden":false},{"id":31,"name":"Cryptography","slug":"cryptography","hidden":false}],"selected":2}],"ab_tests":{"models":[{"id":122,"name":"react_migration","product":1,"variants":[{"id":372,"weight":0,"variant":"trm0"},{"id":373,"weight":1,"variant":"trm1"},{"id":374,"weight":1,"variant":"cnt1"},{"id":375,"weight":4,"variant":"trm2"},{"id":376,"weight":4,"variant":"cnt2"},{"id":377,"weight":5,"variant":"trm3"},{"id":378,"weight":5,"variant":"cnt3"},{"id":379,"weight":10,"variant":"trm4"},{"id":380,"weight":10,"variant":"cnt4"},{"id":381,"weight":10,"variant":"trm5"},{"id":382,"weight":10,"variant":"cnt5"},{"id":383,"weight":20,"variant":"trm6"},{"id":384,"weight":20,"variant":"cnt6"}],"hacker_variant":{"variant":"cnt5","forced":false}},{"id":220,"name":"live-autocomplete-linting-new","product":1,"variants":[{"id":840,"weight":10,"variant":"disabled_small"},{"id":841,"weight":40,"variant":"disabled_large"},{"id":842,"weight":10,"variant":"enabled_small"},{"id":843,"weight":40,"variant":"enabled_large"}],"hacker_variant":{"variant":"disabled_small","forced":false}},{"id":225,"name":"new-full-screen","product":1,"variants":[{"id":874,"weight":0,"variant":"trm0"},{"id":875,"weight":10,"variant":"trm1"},{"id":876,"weight":10,"variant":"cnt1"},{"id":877,"weight":20,"variant":"trm2"},{"id":878,"weight":20,"variant":"cnt2"},{"id":879,"weight":20,"variant":"trm3"},{"id":880,"weight":20,"variant":"cnt3"}],"hacker_variant":{"variant":"cnt1","forced":false}},{"id":234,"name":"onboarding-with-monaco","product":1,"variants":[{"id":951,"weight":0,"variant":"treatment0"},{"id":952,"weight":10,"variant":"treatment1"},{"id":953,"weight":10,"variant":"control1"},{"id":954,"weight":20,"variant":"treatment2"},{"id":955,"weight":20,"variant":"control2"},{"id":956,"weight":20,"variant":"treatment3"},{"id":957,"weight":20,"variant":"control3"}],"hacker_variant":{"variant":"treatment1","forced":false}},{"id":235,"name":"full-screen-dark-mode","product":1,"variants":[{"id":958,"weight":0,"variant":"dark_mode0"},{"id":959,"weight":10,"variant":"dark_mode1"},{"id":960,"weight":10,"variant":"normal_mode1"},{"id":961,"weight":20,"variant":"dark_mode2"},{"id":962,"weight":20,"variant":"normal_mode2"},{"id":963,"weight":20,"variant":"dark_mode3"},{"id":964,"weight":20,"variant":"normal_mode3"}],"hacker_variant":{"variant":"normal_mode1","forced":false}},{"id":236,"name":"job-listing-page-redesign","product":1,"variants":[{"id":965,"weight":0,"variant":"new_design0"},{"id":966,"weight":5,"variant":"new_design1"},{"id":967,"weight":5,"variant":"old_design1"},{"id":968,"weight":5,"variant":"new_design2"},{"id":969,"weight":5,"variant":"old_design2"},{"id":970,"weight":10,"variant":"new_design3"},{"id":971,"weight":10,"variant":"old_design3"},{"id":972,"weight":10,"variant":"new_design4"},{"id":973,"weight":10,"variant":"old_design4"},{"id":974,"weight":20,"variant":"new_design5"},{"id":975,"weight":20,"variant":"old_design5"}],"hacker_variant":{"variant":"old_design4","forced":false}},{"id":237,"name":"jobs-promotion-on-dashboard","product":1,"variants":[{"id":976,"weight":0,"variant":"show_promo0"},{"id":977,"weight":10,"variant":"show_promo1"},{"id":978,"weight":10,"variant":"dont_show_promo1"},{"id":979,"weight":40,"variant":"show_promo2"},{"id":980,"weight":40,"variant":"dont_show_promo2"}],"hacker_variant":{"variant":"show_promo1","forced":false}},{"id":238,"name":"jobs-promotion-on-interview-prep","product":1,"variants":[{"id":981,"weight":0,"variant":"show_promo0"},{"id":982,"weight":10,"variant":"show_promo1"},{"id":983,"weight":10,"variant":"dont_show_promo1"},{"id":984,"weight":40,"variant":"show_promo2"},{"id":985,"weight":40,"variant":"dont_show_promo2"}],"hacker_variant":{"variant":"show_promo2","forced":false}},{"id":239,"name":"skills-verification","product":1,"variants":[{"id":986,"weight":0,"variant":"show0"},{"id":987,"weight":5,"variant":"show1"},{"id":988,"weight":5,"variant":"dont_show1"},{"id":989,"weight":5,"variant":"show2"},{"id":990,"weight":5,"variant":"dont_show2"},{"id":991,"weight":10,"variant":"show3"},{"id":992,"weight":10,"variant":"dont_show3"},{"id":993,"weight":10,"variant":"show4"},{"id":994,"weight":10,"variant":"dont_show4"},{"id":995,"weight":20,"variant":"show5"},{"id":996,"weight":20,"variant":"dont_show5"}],"hacker_variant":{"variant":"dont_show1","forced":false}},{"id":240,"name":"skills-verification-card-text","product":1,"variants":[{"id":997,"weight":20,"variant":"text_1"},{"id":998,"weight":20,"variant":"text_2"},{"id":999,"weight":20,"variant":"text_3"},{"id":1000,"weight":20,"variant":"text_4"},{"id":1001,"weight":20,"variant":"text_5"}],"hacker_variant":{"variant":"text_1","forced":false}},{"id":241,"name":"otp-verification","product":1,"variants":[{"id":1002,"weight":0,"variant":"show0"},{"id":1003,"weight":10,"variant":"show1"},{"id":1004,"weight":10,"variant":"dont_show1"},{"id":1005,"weight":20,"variant":"show2"},{"id":1006,"weight":20,"variant":"dont_show2"},{"id":1007,"weight":20,"variant":"show3"},{"id":1008,"weight":20,"variant":"dont_show3"}],"hacker_variant":{"variant":"show2","forced":false}},{"id":242,"name":"multiple-skills-verification","product":1,"variants":[{"id":1009,"weight":0,"variant":"show0"},{"id":1010,"weight":5,"variant":"show1"},{"id":1011,"weight":5,"variant":"dont_show1"},{"id":1012,"weight":5,"variant":"show2"},{"id":1013,"weight":5,"variant":"dont_show2"},{"id":1014,"weight":10,"variant":"show3"},{"id":1015,"weight":10,"variant":"dont_show3"},{"id":1016,"weight":10,"variant":"show4"},{"id":1017,"weight":10,"variant":"dont_show4"},{"id":1018,"weight":20,"variant":"show5"},{"id":1019,"weight":20,"variant":"dont_show5"}],"hacker_variant":{"variant":"show5","forced":false}},{"id":243,"name":"codesandbox","product":1,"variants":[{"id":1020,"weight":0,"variant":"show0"},{"id":1021,"weight":5,"variant":"show1"},{"id":1022,"weight":5,"variant":"dont_show1"},{"id":1023,"weight":5,"variant":"show2"},{"id":1024,"weight":5,"variant":"dont_show2"},{"id":1025,"weight":10,"variant":"show3"},{"id":1026,"weight":10,"variant":"dont_show3"},{"id":1027,"weight":10,"variant":"show4"},{"id":1028,"weight":10,"variant":"dont_show4"},{"id":1029,"weight":10,"variant":"show5"},{"id":1030,"weight":10,"variant":"dont_show5"},{"id":1031,"weight":10,"variant":"show6"},{"id":1032,"weight":10,"variant":"dont_show6"}],"hacker_variant":{"variant":"dont_show3","forced":false}}]},"in_maintenance_mode":false,"maintenance_details":{"notification_start":1495931400,"maintenance_start":1496017800,"maintenance_end":1496021400,"api_message":"We are performing scheduled maintenance on our servers. Please refer to https://updates.hackerrank.com/scheduled-maintenance-on-may-28th-2018-at-530pm-pt/ for more details."},"feature_feedback_list":[],"admin_su":null,"badge_map":{"algorithms":["problem-solving"],"data-structures":["problem-solving"],"cpp":["cpp"],"java":["java"],"python":["python"],"sql":["sql"],"c":["c"],"ruby":["ruby"],"30-days-of-code":["30-days-of-code"],"10-days-of-javascript":["10-days-of-javascript"],"10-days-of-statistics":["10-days-of-statistics"]},"feature_flags":{}};
+      HR.MANIFEST_HASH = "496ed4b2eee7ad77a31bffdbc7bb9d9eabc4b478";
+    </script>
+
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="https://www.hackerrank.com/rest/blogs.rss">
+<style type="text/css">.fp__btn{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;display:inline-block;height:34px;padding:4px 30px 5px 40px;position:relative;margin-bottom:0;vertical-align:middle;-ms-touch-action:manipulation;touch-action:manipulation;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;font-family:"Open Sans", sans-serif;font-size:12px;font-weight:600;line-height:1.42857143;color:#fff;text-align:center;white-space:nowrap;background:#ef4925;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAVCAYAAABLy77vAAAABGdBTUEAALGPC/xhBQAAAJRJREFUOBHNUcEWgCAIy14fbl9egK5MRarHQS7ocANmOCgWh1gdNERig1CgwPlLxkZuE80ndHlU+4Lda1zz0m01dSKtcz0h7qpQb7WR+HyrqRPxahzwwMqqkEVs6qnv+86NQAbcJlK/X+vMeMe7XcBOYaRzcbItUR7/8QgcykmElQrQPErnmxNxl2yyiwcgEvQUocIJaE6yERwqXDIAAAAASUVORK5CYII=");background-repeat:no-repeat;background-position:15px 6px;border:1px solid transparent;border-radius:17px}.fp__btn:hover{background-color:#d64533}.fp__btn::after{position:absolute;content:"";top:15px;right:14px;width:7px;height:4px;background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAICAYAAAA1BOUGAAAABGdBTUEAALGPC/xhBQAAAGlJREFUCB1j/P//vw4DA4MiEKOD+0xAkatA/AJNBsS/ysTIyPgfyDgHxO+hCkD0Oag4RAhoPDsQm4NoqCIGBiBnAhBjAxNAkkxAvBZNFsQHuQesmxPIOQZVAKI54UZDFYgABbcBsQhMAgDIVGYSqZsn6wAAAABJRU5ErkJggg==");}.fp__btn:hover::after{background-position:0 -4px;}.fp__btn:active,.fp__btn:focus{outline:none}@media only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2){.fp__btn{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAqCAYAAADbCvnoAAAABGdBTUEAALGPC/xhBQAAAQFJREFUWAntWEESwjAIbBwfHl+upNoRNjKUJhk5kIvZQGG7bHOwPGltgdYtEJedShKyJnLHhEILz1Zi9HCOzFI7FUqFLAWseDgPdfeQ9QZ4b1j53nstnEJJyBqx20NeT1gEMB5uZG6Fzn5lV5UMp1ASQhMjdnvoqjewsYbDjcytEH5lsxULp1AS0sx8nJfVnjganf3NkVlKhVPIfQ9Zb6jF0atK3mNriXwpicPHvIeyr3sTDA53VgpgH8BvMu1ZCCz7ew/7MPwlE4CQJPNnQj2ZX4SYlEPbVpsvKFZ5TOwhcRoUTQiwwhVjArPEqVvRhMCneMXzDk9lwYphIwrZZOihF32oehMAa1qSAAAAAElFTkSuQmCC");background-size:18px 21px}.fp__btn::after{background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAQCAYAAAAmlE46AAAABGdBTUEAALGPC/xhBQAAANpJREFUKBWVkU8KglAYxJ/u3HuBwmUX8BqepKN4ka4RguDOVYu2QVCrhIJ6/caekqLiGxi+PzPD58PAWrszxmygD84h7hpePFLy1mEQBJamgvcVYXkqZXTR0LwpJWw0z0Ba6bymDcrI4kkp4EvzCNoVztNKfVATwoOiyx/NDup1SVqPQVBbDDeK3txBb9JuHfhNW3HWjZhDX+SGRAgPHkl5f0+kieBxRVieaPD5LGJ4WghLiwehbkBI4HUirF3S+SYrhhQ2f2H16aR5vMSYwbdjNtYXZ0J7cc70BXnFMHIGznzEAAAAAElFTkSuQmCC");background-size:7px 8px;}}</style></head>
+
+<body id="hr_v2" class="show-cookie-banner" itemscope="" itemtype="http://schema.org/WebPage" style="zoom: 1;">
+      <div class="cdn-error-view" style="display:none;">
+  <div class="error-box-wrap">
+    <div class="error-icon">
+      <svg x="0px" y="0px" width="80px" height="80px" viewBox="0 0 367.011 367.01" style="enable-background:new 0 0 367.011 367.01;" xml:space="preserve">
+        <g>
+         <g>
+          <path d="M365.221,329.641L190.943,27.788c-1.542-2.674-4.395-4.318-7.479-4.318c-3.084,0-5.938,1.645-7.48,4.318L1.157,330.584    c-1.543,2.674-1.543,5.965,0,8.639c1.542,2.674,4.395,4.318,7.48,4.318h349.65c0.028,0,0.057,0,0.086,0    c4.77,0,8.638-3.863,8.638-8.639C367.011,332.92,366.342,331.1,365.221,329.641z M23.599,326.266L183.464,49.381l159.864,276.885    H23.599z"></path>
+          <path d="M174.826,136.801v123.893c0,4.773,3.867,8.638,8.638,8.638c4.77,0,8.637-3.863,8.637-8.638V136.801    c0-4.766-3.867-8.637-8.637-8.637C178.693,128.165,174.826,132.036,174.826,136.801z"></path>
+          <path d="M183.464,279.393c-5.922,0-10.725,4.8-10.725,10.722s4.803,10.729,10.725,10.729c5.921,0,10.725-4.809,10.725-10.729    C194.189,284.193,189.386,279.393,183.464,279.393z"></path>
+         </g>
+        </g>
+      </svg>
+    </div>
+    <h2 class="error-title">Something went wrong!</h2>
+    <p class="error-message">Some error occured while loading page for you. Please try again.</p>
+    <div class="btn-wrap">
+      <a href="https://www.hackerrank.com/#" onclick="window.location.reload(true);"><button class="btn-reload">Reload</button></a>
+    </div>
+  </div>
+</div>
+<script>
+  if(typeof cdnLoaded !== 'undefined' && cdnLoaded === false){
+    document.querySelector('.cdn-error-view').style.display = 'block';
+  }
+</script>
+
+    <script type="text/template" id="navigation">
+    <% if(HR.util.showCookieBanner()) { %>
+        <div class="cookie-banner-wrapper navigation-banner">
+            <div class="cookie-d-flex container">
+                <div class="cookie-message msL">We use cookies to ensure you have the best browsing experience on our website.
+                    Please read our <a href="/privacy#cookies" target="_blank" class="cookie-link">cookie policy</a> for more information about how we use cookies.
+                </div>
+                <button class="ui-btn-secondary cookie-accept-btn"><span class="ui-text">Ok</span></button>
+            </div>
+        </div>
+    <% } %>
+    <div class="page-header-wrapper theme-m-section">
+        <nav class="community-header">
+            <div class="container">
+                <span class="nav-links theme-m-section"></span>
+                <span class="nav-buttons theme-m-section"></span>
+            </div>
+        </nav>
+    </div>
+</script>
+
+<script type="text/template" id="nav-links">
+    <ul class="nav-links">
+        <li class="nav-link-item logo-wrap">
+            <a href="/dashboard" class="nav_link backbone logo_mark js_logo_mark logo-link" data-analytics="NavBarLogo"><img id="feed-intro" class="logo-img-small" src="<%- asset_path('brand/h_mark_sm.svg') %>" alt=""/></a>
+        </li>
+        <li class="nav-link-item">
+            <a href="/dashboard" class="nav-link domains" data-analytics="NavBarDomains">
+              <span>PRACTICE</span>
+            </a>
+        </li>
+        <li class="nav-link-item">
+            <a href="/contests" class="nav-link contests" data-analytics="NavBarContests">
+              <span>COMPETE</span>
+            </a>
+        </li>
+        <li class="nav-link-item">
+            <a href="/jobs/search" class="nav-link" data-analytics="NavBarJobs">
+              <span>JOBS</span>
+              <i class="icon-circle js-jobs-notification navigation-highlight-icon hidden"></i>
+            </a>
+        </li>
+        <li class="nav-link-item">
+            <a href="/leaderboard" class="nav-link" data-analytics="NavBarLeaderboard" id='leaderboard-nav-link'>
+              <span>LEADERBOARD</span>
+            </a>
+        </li>
+    </ul>
+</script>
+
+<script type="text/template" id="nav-search">
+    <div class="hide-in-private-contest search-input input-icon">
+        <input type="text" id="search-text" class="new-search-query" autocomplete="off" data-analytics="NavBarSearchBox" placeholder="Search">
+        <i class="icon-search"></i>
+    </div>
+    <div class="hide-in-private-contest search-result hide">
+        <ul class="unstyled"></ul>
+    </div>
+</script>
+
+<script type="text/template" id="nav-buttons">
+    <ul class="pull-left psR">
+        <li class="hide-in-private-contest search-input-container input-icon main-hr-search" id="search-span">
+            <div class="search_form new-search theme-m-content"></div>
+        </li>
+    </ul>
+    <% if (profile && profile.isLoggedIn()) { %>
+        <ul class="pull-left nav-wrap mmL">
+
+            <li class="hide-in-private-contest notify_dropdown notify-dropdown dropdown message-dropdown theme-m-content" id="tab-profile-messages">
+                <a class="cursor backbone nav_link hr_nav_messages_link" data-toggle="dropdown" data-analytics="NavBarMessageIcon">
+                    <i class="icon-theme-m-message icon--single"></i>
+                    <span class="indicator number-indicator hr_messages_count hidden"></span>
+                </a>
+                <div class="dropdown-menu large theme-m-dropdown">
+                    <header class="psT psB text-center menu-header">
+                        <strong className="header-title">Messages</strong>
+                    </header>
+                        <div id="notify_messages" class="dropdown-body">
+                            <ul></ul>
+                        </div>
+                    <footer class="final text-center show-all">
+                        <a class="btn backbone show-all-link" href="/inbox" data-analytics="NavBarMessageShowAll">Show All</a>
+                    </footer>
+                </div>
+            </li>
+            <li class="dropdown notify_dropdown theme-m-content" id="tab-profile-notifs">
+                <a class="cursor backbone nav_link hr_nav_notifications_link" data-toggle="dropdown" data-analytics="NavBarNotificationsIcon">
+                    <i class="icon-theme-m-notification icon--single"></i>
+                    <span class="indicator number-indicator hr_notifications_count hidden"></span>
+                </a>
+                <div class="dropdown-menu large theme-m-dropdown" id="notify_broadcasts">
+                    <header class="psA">
+                        <strong>Notifications</strong>
+                        <a class="hr_archive_all archive pull-right" data-analytics="NavBarNotificationsArchiveAll"><i class="icon-folder-open"></i>Archive All</a>
+                    </header>
+                    <div class="clearfix dropdown-body">
+                        <ul class="hr_nav_notifications_list">
+                        </ul>
+                    </div>
+                    <footer class="final text-center show-all">
+                        <a class="btn backbone show-all-link" href="/notifications" data-analytics="NavBarNotificationsShowAll">Show All</a>
+                    </footer>
+                </div>
+            </li>
+            <li class="dropdown-auth">
+                <div class="dropdown theme-m-content profile-menu-item" id="profile-menu">
+                    <a class="backbone nav_link dropdown-toggle" href="" data-toggle="dropdown" data-analytics="NavBarProfileDropDown">
+                        <img src="<%= _profile.avatar %>" alt="" class="avatar" onerror="this.onerror=null; this.src='https://d3rpyts3de3lx8.cloudfront.net/hackerrank/assets/gravatar.jpg';">
+                        <span class="mmR profile-username"><%- _profile.username %></span>
+                        <i class="icon-down-open"></i>
+                    </a>
+                    <div class="dropdown-menu drop-list pull-right">
+                        <ul>
+                            <li class="hide-in-private-contest profile-nav-item"><a class="navigation_hackos hackos-count backbone" href="/<%- _profile.username %>/hackos" data-analytics="NavBarProfileDropDownHackos">Hackos: <span class="navigation_hackos-count"><%= _profile.hacko_amount %></span></a></li>
+                            <li class="hide-in-private-contest profile-nav-item">
+                                <a class="backbone" rel="tooltip" data-placement="left" href="/<%- _profile.username %>" data-analytics="NavBarProfileDropDownProfile">
+                                    Profile
+                                    <!-- NOTE also add title="x% complete" to profile link-->
+                                    <div class="ui-progress-bar theme-progress-bar">
+                                        <div class="progress-filler" style="width: <%= _profileProgress %>%;"></div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="hide-in-private-contest profile-nav-item"><a class="backbone" href="/settings" data-analytics="NavBarProfileDropDownSettings">Settings</a></li>
+                            <li class="hide-in-private-contest profile-nav-item"><a class="backbone" href="/challenges/bookmarks" data-analytics="NavBarDropDownBookmarks">Bookmarks</a></li>
+                            <% if (HR.ABTest && HR.ABTest.is_variant("hrc-code-snippets", "trm1")){ %>
+                                <li class="hide-in-private-contest profile-nav-item"><a href="/snippets" data-analytics="NavBarProfileDropDownCodeSnippets">Code Snippets</a></li>
+                            <% } %>
+                            <li class="hide-in-private-contest profile-nav-item"><a class="backbone" href="/network" data-analytics="NavBarProfileDropDownNetwork">Network</a></li>
+                            <li class="hide-in-private-contest profile-nav-item"><a class="backbone" href="/submissions" data-analytics="NavBarProfileDropDownSubmissions">Submissions</a></li>
+                            <li class="hide-in-private-contest profile-nav-item"><a class="backbone" href="/administration" data-analytics="NavBarProfileDropDownAdministration">Administration</a></li>
+                            <li class="profile-nav-item"><a class="logout-button" data-analytics="NavBarProfileDropDownLogout">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    <% } %>
+</script>
+
+    <script type="text/template" id="breadcrumb">
+    <% var counter = 0; %>
+    <div class="content-header">
+        <div class="container">
+            <div class="clearfix">
+                <ol itemscope itemtype="http://schema.org/BreadcrumbList" class="pull-left mdT msB pjT bcrumb">
+                    <% var breadcrumb_level = 0; var levelValKeys = _.keys(level_values);%>
+                    <% for (var index in level_values) { %>
+                      <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <% if (counter==0) {
+                             counter = counter + 1;
+                           } else { %>
+                             <i class="icon-right-open mmL"></i>
+                        <% } %>
+                        <a itemprop="item" href="<%= level_values[index].url %>" class="backbone"
+                           data-analytics="Breadcrumb" data-attr1="<%- level_values[index].text %>"
+                           data-attr2="<%= index %>" data-attr7="<%= breadcrumb_level += 1 %>"><span itemprop="name"><%- level_values[index].text %></span></a>
+                        <meta itemprop="position" content="<%- breadcrumb_level %>" />
+                      </li>
+                    <% } %>
+                </ol>
+                 <div class="pull-right hide domain-scores">
+                    <div class="pull-left badge-progress">
+                    </div>
+                    <div class="pull-right pdT brcumb-points">
+                        <span class="zeta bold">Points: </span><span class="bold domain-score"></span>
+                        <span class="domain-rank-span">
+                            <span class="zeta bold">Rank: </span><span class="bold msR domain-rank "></span>
+                        </span>
+                    </div>
+                 </div>
+                <div class="social-share-wrap-2 hide"></div>
+            </div>
+        </div>
+    </div>
+</script>
+
+
+    <div id="wrapper" class="theme-m-content" style="min-height: 721px;">
+        <div id="navigation">
+    
+        <div class="cookie-banner-wrapper navigation-banner">
+            <div class="cookie-d-flex container">
+                <div class="cookie-message msL">We use cookies to ensure you have the best browsing experience on our website.
+                    Please read our <a href="https://www.hackerrank.com/privacy#cookies" target="_blank" class="cookie-link">cookie policy</a> for more information about how we use cookies.
+                </div>
+                <button class="ui-btn-secondary cookie-accept-btn"><span class="ui-text">Ok</span></button>
+            </div>
+        </div>
+    
+    <div class="page-header-wrapper theme-m-section">
+        <nav class="community-header">
+            <div class="container">
+                <span class="nav-links theme-m-section">
+    <ul class="nav-links">
+        <li class="nav-link-item logo-wrap">
+            <a href="https://www.hackerrank.com/dashboard?h_r=logo" class="nav_link backbone logo_mark js_logo_mark logo-link" data-analytics="NavBarLogo"><img id="feed-intro" class="logo-img-small" src="./Bob&#39;s Game _ University CodeSprint 3 Question _ Contests _ HackerRank_files/h_mark_sm-9c05999c62674028552f4e813728e591.svg" alt=""></a>
+        </li>
+        <li class="nav-link-item">
+            <a href="https://www.hackerrank.com/dashboard" class="nav-link domains" data-analytics="NavBarDomains">
+              <span>PRACTICE</span>
+            </a>
+        </li>
+        <li class="nav-link-item">
+            <a href="https://www.hackerrank.com/contests" class="nav-link contests active" data-analytics="NavBarContests">
+              <span>COMPETE</span>
+            </a>
+        </li>
+        <li class="nav-link-item">
+            <a href="https://www.hackerrank.com/jobs/search" class="nav-link" data-analytics="NavBarJobs">
+              <span>JOBS</span>
+              <i class="icon-circle js-jobs-notification navigation-highlight-icon hidden"></i>
+            </a>
+        </li>
+        <li class="nav-link-item">
+            <a href="https://www.hackerrank.com/leaderboard" class="nav-link" data-analytics="NavBarLeaderboard" id="leaderboard-nav-link">
+              <span>LEADERBOARD</span>
+            </a>
+        </li>
+    </ul>
+</span>
+                <span class="nav-buttons theme-m-section">
+    <ul class="pull-left psR">
+        <li class="hide-in-private-contest search-input-container input-icon main-hr-search" id="search-span">
+            <div class="search_form new-search theme-m-content">
+    <div class="hide-in-private-contest search-input input-icon">
+        <input type="text" id="search-text" class="new-search-query ui-autocomplete-input" autocomplete="off" data-analytics="NavBarSearchBox" placeholder="Search">
+        <i class="icon-search"></i>
+    </div>
+    <div class="hide-in-private-contest search-result hide" style="display: block;">
+        <ul class="unstyled"></ul>
+    </div>
+</div>
+        </li>
+    </ul>
+    
+</span>
+            </div>
+        </nav>
+    </div>
+</div>
+        <div id="side-navigation"></div>
+        <div id="verifyaccount">
+</div>
+        <div id="ajax-msg-wrap"><div id="ajax-msg" style="margin-left: 0px; display: none;"><span class="ajax-loader"></span><span class="ajax-msg"></span></div></div>
+        <!--<div id="countdowntimer" style="display: none;"></div>-->
+        <div id="breadcrumb" style="display: block;">
+    
+    <div class="content-header">
+        <div class="container">
+            <div class="clearfix">
+                <ol itemscope="" itemtype="http://schema.org/BreadcrumbList" class="pull-left mdT msB pjT bcrumb">
+                    
+                    
+                      <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        
+                        <a itemprop="item" href="https://www.hackerrank.com/contests" class="backbone" data-analytics="Breadcrumb" data-attr1="All Contests" data-attr2="global" data-attr7="1"><span itemprop="name">All Contests</span></a>
+                        <meta itemprop="position" content="1">
+                      </li>
+                    
+                      <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        
+                             <i class="icon-right-open mmL"></i>
+                        
+                        <a itemprop="item" href="https://www.hackerrank.com/contests/university-codesprint-3/challenges" class="backbone" data-analytics="Breadcrumb" data-attr1="University CodeSprint 3" data-attr2="contest" data-attr7="2"><span itemprop="name">University CodeSprint 3</span></a>
+                        <meta itemprop="position" content="2">
+                      </li>
+                    
+                      <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        
+                             <i class="icon-right-open mmL"></i>
+                        
+                        <a itemprop="item" href="https://www.hackerrank.com/contests/university-codesprint-3/challenges/bobs-game" class="backbone" data-analytics="Breadcrumb" data-attr1="Bob&#39;s Game" data-attr2="challenge" data-attr7="3"><span itemprop="name">Bob's Game</span></a>
+                        <meta itemprop="position" content="3">
+                      </li>
+                    
+                </ol>
+                 <div class="pull-right hide domain-scores" style="display: none;">
+                    <div class="pull-left badge-progress">
+                    </div>
+                    <div class="pull-right pdT brcumb-points">
+                        <span class="zeta bold">Points: </span><span class="bold domain-score"></span>
+                        <span class="domain-rank-span">
+                            <span class="zeta bold">Rank: </span><span class="bold msR domain-rank "></span>
+                        </span>
+                    </div>
+                 </div>
+                <div class="social-share-wrap-2 hide"></div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div id="flash"></div>
+        <div id="followbanner"></div>
+        <div id="submission-success-messages"></div>
+        <div id="contestwide-broadcast"></div>
+        <div id="content" class="main_content"><div class="challenge-view"><div>
+   
+    <div class="challenge-header"><div class="container">
+    <div class="mdT mmB span10">
+        <div class="clearfix">
+            <h2 class="hr_tour-challenge-name pull-left mlT">
+                Bob's Game
+                
+                
+            </h2>
+            
+            
+            <div class="pull-right challenge-title-note msL">
+                <a rel="tooltip" data-original-title="Any further submissions will not be considered for leaderboard." id="locked-popover" class="active-link pull-right" data-analytics="ChallengeViewHeaderLeaderboardLocked" data-attr1="bobs-game">
+                    <small class="badge alert"><i class="icon-lock"></i>locked</small>
+                </a>
+            </div>
+            
+            </div>
+            
+            <div class="clearfix mlB mmT">
+                <img src="./Bob&#39;s Game _ University CodeSprint 3 Question _ Contests _ HackerRank_files/150x150.png" height="25" width="25" class="avatar pull-left msR" onerror="this.onerror=null; this.src=&#39;https://d3rpyts3de3lx8.cloudfront.net/hackerrank/assets/gravatar.jpg&#39;;">
+                <span class="small bold">by
+                    
+                        <a class="backbone color-blue" href="https://www.hackerrank.com/profile/nikasvanidze" data-analytics="ChallengeViewHeaderAuthor" data-attr1="bobs-game" data-attr2="nikasvanidze">nikasvanidze</a>
+                    
+                </span>
+            </div>
+            
+        </div>
+        
+    </div>
+
+            
+
+<div class="container">
+    <ul class="nav-tabs nav mlT">
+
+        <!-- Problem -->
+        <li id="problemTab" class="active">
+            <a class="hr-problem-link" href="https://www.hackerrank.com/contests/university-codesprint-3/challenges/bobs-game" data-analytics="ChallengeViewTab" data-attr1="bobs-game" data-attr2="Problem">Problem</a>
+        </li>
+
+        <!-- Expert (Live) -->
+        
+
+        <!-- Submissions -->
+        
+            <li id="submissionsTab">
+                <a class="hr-submissions-link" href="https://www.hackerrank.com/contests/university-codesprint-3/challenges/bobs-game/submissions" data-analytics="ChallengeViewTab" data-attr1="bobs-game" data-attr2="Submissions">Submissions</a>
+            </li>
+        
+
+        <!-- Leadeboard -->
+        
+            <li id="leaderboardTab">
+                <a class="hr-leaderboard-link" href="https://www.hackerrank.com/contests/university-codesprint-3/challenges/bobs-game/leaderboard" data-analytics="ChallengeViewTab" data-attr1="bobs-game" data-attr2="Leaderboard">Leaderboard</a>
+            </li>
+        
+
+        <!-- Discussion -->
+        
+            <li id="forumTab">
+                <a class="hr-forum-link" href="https://www.hackerrank.com/contests/university-codesprint-3/challenges/bobs-game/forum" data-analytics="ChallengeViewTab" data-attr1="bobs-game" data-attr2="Discussions">Discussions</a>
+            </li>
+        
+
+        <!-- Editorial -->
+        
+        <li id="editorialTab">
+            <a class="hr-editorial-link" href="https://www.hackerrank.com/contests/university-codesprint-3/challenges/bobs-game/editorial" data-analytics="ChallengeViewTab" data-attr1="bobs-game" data-attr2="Editorial">Editorial <i class="icon-lock"></i></a>
+        </li>
+        
+
+        <!-- Custom Pages -->
+        
+
+        <!-- Topics -->
+        
+    </ul>
+</div>
+</div>
+    <style></style>
+    <section class="challenge-interface">
+        <div class="challenge-body">
+          <div class="challenge-container-element hidden challenge-container-elements-loading">
+            <div class="gray block-center">
+              <div style="background: url(https://hrcdn.net/hackerrank/assets/hackerrank_spinner_64x64-d305605f2d7306772da0f86560bc1286.gif); height: 64px; width: 64px; display: inline-block;"></div>
+            </div>
+          </div>
+        <div class="challenge-body-elements-problem challenge-container-element"><div class="challenge-content"><div class="container fs-container">
+    <div class="row">
+        <div class="span-sm-11 hr_tour-problem-statement problem-statement">
+            
+            
+            
+            
+            <div class="content-text challenge-text mlB">
+                <div class="challenge_problem_statement"><div class="msB challenge_problem_statement_body"><div class="hackdown-content"><style id="MathJax_SVG_styles">.MathJax_SVG_Display {text-align: center; margin: 1em 0em; position: relative; display: block!important; text-indent: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; width: 100%}
+.MathJax_SVG .MJX-monospace {font-family: monospace}
+.MathJax_SVG .MJX-sans-serif {font-family: sans-serif}
+.MathJax_SVG {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
+.MathJax_SVG * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.mjx-svg-href {fill: blue; stroke: blue}
+.MathJax_SVG_LineBox {display: table!important}
+.MathJax_SVG_LineBox span {display: table-cell!important; width: 10000em!important; min-width: 0; max-width: none; padding: 0; border: 0; margin: 0}
+</style><svg style="display: none;"><defs id="MathJax_SVG_glyphs"></defs></svg><p>Bob recently invented a new game. The game is played on an <span style="font-size: 100%; display: inline-block;" class="MathJax_SVG" id="MathJax-Element-1-Frame"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="5.63ex" height="1.676ex" style="vertical-align: -0.338ex;" viewBox="0 -576.1 2423.9 721.6" role="img" focusable="false"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><path stroke-width="1" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path><g transform="translate(822,0)"><path stroke-width="1" d="M630 29Q630 9 609 9Q604 9 587 25T493 118L389 222L284 117Q178 13 175 11Q171 9 168 9Q160 9 154 15T147 29Q147 36 161 51T255 146L359 250L255 354Q174 435 161 449T147 471Q147 480 153 485T168 490Q173 490 175 489Q178 487 284 383L389 278L493 382Q570 459 587 475T609 491Q630 491 630 471Q630 464 620 453T522 355L418 250L522 145Q606 61 618 48T630 29Z"></path></g><g transform="translate(1823,0)"><path stroke-width="1" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></g></g></svg></span> chessboard. The rules of the game are:</p>
+
+<ul>
+<li><p>Initially, there are kings in some of the cells. A cell can contain more than one king.</p></li>
+<li><p>A king is only allowed to move in one of three directions: up, left or up-left.</p></li>
+<li><p>Some of the cells on the board might be damaged. A king is not allowed to move to a damaged cell.</p></li>
+</ul>
+
+<p><img src="./Bob&#39;s Game _ University CodeSprint 3 Question _ Contests _ HackerRank_files/1493445653-01fd905ded-king4.png" alt="image" title=""></p>
+
+<ul>
+<li><p>A king cannot be moved outside the board.</p></li>
+<li><p>There are two players in the game. They make moves alternately. </p></li>
+<li><p>In a single move, a player must choose a single king and move it to a new cell.</p></li>
+<li><p>If a player can't make a move, they lose the game.</p></li>
+</ul>
+
+<p>Bob is playing the game with his friend Alice. Bob always makes the first move. Given the configuration of the board, Find the number of ways Bob can make the first move to ensure that he will win the game, assuming that both players will play optimally.</p></div></div></div><div class="challenge_input_format"><div class="msB challenge_input_format_title"><p><strong>Input Format</strong></p></div><div class="msB challenge_input_format_body"><div class="hackdown-content"><style id="MathJax_SVG_styles">.MathJax_SVG_Display {text-align: center; margin: 1em 0em; position: relative; display: block!important; text-indent: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; width: 100%}
+.MathJax_SVG .MJX-monospace {font-family: monospace}
+.MathJax_SVG .MJX-sans-serif {font-family: sans-serif}
+.MathJax_SVG {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
+.MathJax_SVG * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.mjx-svg-href {fill: blue; stroke: blue}
+.MathJax_SVG_LineBox {display: table!important}
+.MathJax_SVG_LineBox span {display: table-cell!important; width: 10000em!important; min-width: 0; max-width: none; padding: 0; border: 0; margin: 0}
+</style><svg style="display: none;"><defs id="MathJax_SVG_glyphs"></defs></svg><p>The first line contains <span style="font-size: 100%; display: inline-block;" class="MathJax_SVG" id="MathJax-Element-1-Frame"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.07ex" height="2.009ex" style="vertical-align: -0.671ex;" viewBox="0 -576.1 460.5 865.1" role="img" focusable="false"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><path stroke-width="1" d="M33 157Q33 258 109 349T280 441Q340 441 372 389Q373 390 377 395T388 406T404 418Q438 442 450 442Q454 442 457 439T460 434Q460 425 391 149Q320 -135 320 -139Q320 -147 365 -148H390Q396 -156 396 -157T393 -175Q389 -188 383 -194H370Q339 -192 262 -192Q234 -192 211 -192T174 -192T157 -193Q143 -193 143 -185Q143 -182 145 -170Q149 -154 152 -151T172 -148Q220 -148 230 -141Q238 -136 258 -53T279 32Q279 33 272 29Q224 -10 172 -10Q117 -10 75 30T33 157ZM352 326Q329 405 277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q233 26 290 98L298 109L352 326Z"></path></g></svg></span>, the number of queries. For each query:</p>
+
+<ul>
+<li>The first line contains <span style="font-size: 100%; display: inline-block;" class="MathJax_SVG" id="MathJax-Element-2-Frame"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.395ex" height="1.676ex" style="vertical-align: -0.338ex;" viewBox="0 -576.1 600.5 721.6" role="img" focusable="false"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><path stroke-width="1" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></g></svg></span>.</li>
+<li>The next <span style="font-size: 100%; display: inline-block;" class="MathJax_SVG" id="MathJax-Element-3-Frame"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.395ex" height="1.676ex" style="vertical-align: -0.338ex;" viewBox="0 -576.1 600.5 721.6" role="img" focusable="false"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><path stroke-width="1" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></g></svg></span> lines each contains <span style="font-size: 100%; display: inline-block;" class="MathJax_SVG" id="MathJax-Element-4-Frame"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.395ex" height="1.676ex" style="vertical-align: -0.338ex;" viewBox="0 -576.1 600.5 721.6" role="img" focusable="false"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><path stroke-width="1" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></g></svg></span> symbols. <code>X</code> means the cell is damaged, <code>K</code> means a cell with a single king and <code>.</code> means an empty cell. </li>
+</ul></div></div></div><div class="challenge_constraints"><div class="msB challenge_constraints_title"><p><strong>Constraints</strong></p></div><div class="msB challenge_constraints_body"><div class="hackdown-content"><style id="MathJax_SVG_styles">.MathJax_SVG_Display {text-align: center; margin: 1em 0em; position: relative; display: block!important; text-indent: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; width: 100%}
+.MathJax_SVG .MJX-monospace {font-family: monospace}
+.MathJax_SVG .MJX-sans-serif {font-family: sans-serif}
+.MathJax_SVG {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
+.MathJax_SVG * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.mjx-svg-href {fill: blue; stroke: blue}
+.MathJax_SVG_LineBox {display: table!important}
+.MathJax_SVG_LineBox span {display: table-cell!important; width: 10000em!important; min-width: 0; max-width: none; padding: 0; border: 0; margin: 0}
+</style><svg style="display: none;"><defs id="MathJax_SVG_glyphs"></defs></svg><ul>
+<li><span style="font-size: 100%; display: inline-block;" class="MathJax_SVG" id="MathJax-Element-1-Frame"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="9.591ex" height="2.509ex" style="vertical-align: -0.671ex;" viewBox="0 -791.3 4129.6 1080.4" role="img" focusable="false"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><path stroke-width="1" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><g transform="translate(778,0)"><path stroke-width="1" d="M674 636Q682 636 688 630T694 615T687 601Q686 600 417 472L151 346L399 228Q687 92 691 87Q694 81 694 76Q694 58 676 56H670L382 192Q92 329 90 331Q83 336 83 348Q84 359 96 365Q104 369 382 500T665 634Q669 636 674 636ZM84 -118Q84 -108 99 -98H678Q694 -104 694 -118Q694 -130 679 -138H98Q84 -131 84 -118Z"></path></g><g transform="translate(1834,0)"><path stroke-width="1" d="M33 157Q33 258 109 349T280 441Q340 441 372 389Q373 390 377 395T388 406T404 418Q438 442 450 442Q454 442 457 439T460 434Q460 425 391 149Q320 -135 320 -139Q320 -147 365 -148H390Q396 -156 396 -157T393 -175Q389 -188 383 -194H370Q339 -192 262 -192Q234 -192 211 -192T174 -192T157 -193Q143 -193 143 -185Q143 -182 145 -170Q149 -154 152 -151T172 -148Q220 -148 230 -141Q238 -136 258 -53T279 32Q279 33 272 29Q224 -10 172 -10Q117 -10 75 30T33 157ZM352 326Q329 405 277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q233 26 290 98L298 109L352 326Z"></path></g><g transform="translate(2572,0)"><path stroke-width="1" d="M674 636Q682 636 688 630T694 615T687 601Q686 600 417 472L151 346L399 228Q687 92 691 87Q694 81 694 76Q694 58 676 56H670L382 192Q92 329 90 331Q83 336 83 348Q84 359 96 365Q104 369 382 500T665 634Q669 636 674 636ZM84 -118Q84 -108 99 -98H678Q694 -104 694 -118Q694 -130 679 -138H98Q84 -131 84 -118Z"></path></g><g transform="translate(3629,0)"><path stroke-width="1" d="M164 157Q164 133 148 117T109 101H102Q148 22 224 22Q294 22 326 82Q345 115 345 210Q345 313 318 349Q292 382 260 382H254Q176 382 136 314Q132 307 129 306T114 304Q97 304 95 310Q93 314 93 485V614Q93 664 98 664Q100 666 102 666Q103 666 123 658T178 642T253 634Q324 634 389 662Q397 666 402 666Q410 666 410 648V635Q328 538 205 538Q174 538 149 544L139 546V374Q158 388 169 396T205 412T256 420Q337 420 393 355T449 201Q449 109 385 44T229 -22Q148 -22 99 32T50 154Q50 178 61 192T84 210T107 214Q132 214 148 197T164 157Z"></path></g></g></svg></span>.</li>
+<li><span style="font-size: 100%; display: inline-block;" class="MathJax_SVG" id="MathJax-Element-2-Frame"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="13.404ex" height="2.343ex" style="vertical-align: -0.505ex;" viewBox="0 -791.3 5771.1 1008.6" role="img" focusable="false"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><path stroke-width="1" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path><g transform="translate(778,0)"><path stroke-width="1" d="M674 636Q682 636 688 630T694 615T687 601Q686 600 417 472L151 346L399 228Q687 92 691 87Q694 81 694 76Q694 58 676 56H670L382 192Q92 329 90 331Q83 336 83 348Q84 359 96 365Q104 369 382 500T665 634Q669 636 674 636ZM84 -118Q84 -108 99 -98H678Q694 -104 694 -118Q694 -130 679 -138H98Q84 -131 84 -118Z"></path></g><g transform="translate(1834,0)"><path stroke-width="1" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></g><g transform="translate(2712,0)"><path stroke-width="1" d="M674 636Q682 636 688 630T694 615T687 601Q686 600 417 472L151 346L399 228Q687 92 691 87Q694 81 694 76Q694 58 676 56H670L382 192Q92 329 90 331Q83 336 83 348Q84 359 96 365Q104 369 382 500T665 634Q669 636 674 636ZM84 -118Q84 -108 99 -98H678Q694 -104 694 -118Q694 -130 679 -138H98Q84 -131 84 -118Z"></path></g><g transform="translate(3769,0)"><path stroke-width="1" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path stroke-width="1" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(500,0)"></path><path stroke-width="1" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(1001,0)"></path><path stroke-width="1" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(1501,0)"></path></g></g></svg></span>.</li>
+</ul>
+
+<p><strong>Subtasks</strong> </p>
+
+<ul>
+<li>For <span style="font-size: 100%; display: inline-block;" class="MathJax_SVG" id="MathJax-Element-3-Frame"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="4.261ex" height="2.343ex" style="vertical-align: -0.338ex;" viewBox="0 -863.1 1834.5 1008.6" role="img" focusable="false"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><path stroke-width="1" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"></path><path stroke-width="1" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(500,0)"></path><g transform="translate(1001,0)"><path stroke-width="1" d="M465 605Q428 605 394 614T340 632T319 641Q332 608 332 548Q332 458 293 403T202 347Q145 347 101 402T56 548Q56 637 101 693T202 750Q241 750 272 719Q359 642 464 642Q580 642 650 732Q662 748 668 749Q670 750 673 750Q682 750 688 743T693 726Q178 -47 170 -52Q166 -56 160 -56Q147 -56 142 -45Q137 -36 142 -27Q143 -24 363 304Q469 462 525 546T581 630Q528 605 465 605ZM207 385Q235 385 263 427T292 548Q292 617 267 664T200 712Q193 712 186 709T167 698T147 668T134 615Q132 595 132 548V527Q132 436 165 403Q183 385 203 385H207ZM500 146Q500 234 544 290T647 347Q699 347 737 292T776 146T737 0T646 -56Q590 -56 545 0T500 146ZM651 -18Q679 -18 707 24T736 146Q736 215 711 262T644 309Q637 309 630 306T611 295T591 265T578 212Q577 200 577 146V124Q577 -18 647 -18H651Z"></path></g></g></svg></span> of the total score, <span style="font-size: 100%; display: inline-block;" class="MathJax_SVG" id="MathJax-Element-4-Frame"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="9.917ex" height="2.343ex" style="vertical-align: -0.505ex;" viewBox="0 -791.3 4269.6 1008.6" role="img" focusable="false"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><path stroke-width="1" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path><g transform="translate(778,0)"><path stroke-width="1" d="M674 636Q682 636 688 630T694 615T687 601Q686 600 417 472L151 346L399 228Q687 92 691 87Q694 81 694 76Q694 58 676 56H670L382 192Q92 329 90 331Q83 336 83 348Q84 359 96 365Q104 369 382 500T665 634Q669 636 674 636ZM84 -118Q84 -108 99 -98H678Q694 -104 694 -118Q694 -130 679 -138H98Q84 -131 84 -118Z"></path></g><g transform="translate(1834,0)"><path stroke-width="1" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></g><g transform="translate(2712,0)"><path stroke-width="1" d="M674 636Q682 636 688 630T694 615T687 601Q686 600 417 472L151 346L399 228Q687 92 691 87Q694 81 694 76Q694 58 676 56H670L382 192Q92 329 90 331Q83 336 83 348Q84 359 96 365Q104 369 382 500T665 634Q669 636 674 636ZM84 -118Q84 -108 99 -98H678Q694 -104 694 -118Q694 -130 679 -138H98Q84 -131 84 -118Z"></path></g><g transform="translate(3769,0)"><path stroke-width="1" d="M164 157Q164 133 148 117T109 101H102Q148 22 224 22Q294 22 326 82Q345 115 345 210Q345 313 318 349Q292 382 260 382H254Q176 382 136 314Q132 307 129 306T114 304Q97 304 95 310Q93 314 93 485V614Q93 664 98 664Q100 666 102 666Q103 666 123 658T178 642T253 634Q324 634 389 662Q397 666 402 666Q410 666 410 648V635Q328 538 205 538Q174 538 149 544L139 546V374Q158 388 169 396T205 412T256 420Q337 420 393 355T449 201Q449 109 385 44T229 -22Q148 -22 99 32T50 154Q50 178 61 192T84 210T107 214Q132 214 148 197T164 157Z"></path></g></g></svg></span>.</li>
+<li>For <span style="font-size: 100%; display: inline-block;" class="MathJax_SVG" id="MathJax-Element-5-Frame"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="4.261ex" height="2.343ex" style="vertical-align: -0.338ex;" viewBox="0 -863.1 1834.5 1008.6" role="img" focusable="false"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><path stroke-width="1" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"></path><path stroke-width="1" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(500,0)"></path><g transform="translate(1001,0)"><path stroke-width="1" d="M465 605Q428 605 394 614T340 632T319 641Q332 608 332 548Q332 458 293 403T202 347Q145 347 101 402T56 548Q56 637 101 693T202 750Q241 750 272 719Q359 642 464 642Q580 642 650 732Q662 748 668 749Q670 750 673 750Q682 750 688 743T693 726Q178 -47 170 -52Q166 -56 160 -56Q147 -56 142 -45Q137 -36 142 -27Q143 -24 363 304Q469 462 525 546T581 630Q528 605 465 605ZM207 385Q235 385 263 427T292 548Q292 617 267 664T200 712Q193 712 186 709T167 698T147 668T134 615Q132 595 132 548V527Q132 436 165 403Q183 385 203 385H207ZM500 146Q500 234 544 290T647 347Q699 347 737 292T776 146T737 0T646 -56Q590 -56 545 0T500 146ZM651 -18Q679 -18 707 24T736 146Q736 215 711 262T644 309Q637 309 630 306T611 295T591 265T578 212Q577 200 577 146V124Q577 -18 647 -18H651Z"></path></g></g></svg></span> of the total score, <span style="font-size: 100%; display: inline-block;" class="MathJax_SVG" id="MathJax-Element-6-Frame"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="12.241ex" height="2.343ex" style="vertical-align: -0.505ex;" viewBox="0 -791.3 5270.6 1008.6" role="img" focusable="false"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><path stroke-width="1" d="M42 313Q42 476 123 571T303 666Q372 666 402 630T432 550Q432 525 418 510T379 495Q356 495 341 509T326 548Q326 592 373 601Q351 623 311 626Q240 626 194 566Q147 500 147 364L148 360Q153 366 156 373Q197 433 263 433H267Q313 433 348 414Q372 400 396 374T435 317Q456 268 456 210V192Q456 169 451 149Q440 90 387 34T253 -22Q225 -22 199 -14T143 16T92 75T56 172T42 313ZM257 397Q227 397 205 380T171 335T154 278T148 216Q148 133 160 97T198 39Q222 21 251 21Q302 21 329 59Q342 77 347 104T352 209Q352 289 347 316T329 361Q302 397 257 397Z"></path><g transform="translate(778,0)"><path stroke-width="1" d="M674 636Q682 636 688 630T694 615T687 601Q686 600 417 472L151 346L399 228Q687 92 691 87Q694 81 694 76Q694 58 676 56H670L382 192Q92 329 90 331Q83 336 83 348Q84 359 96 365Q104 369 382 500T665 634Q669 636 674 636ZM84 -118Q84 -108 99 -98H678Q694 -104 694 -118Q694 -130 679 -138H98Q84 -131 84 -118Z"></path></g><g transform="translate(1834,0)"><path stroke-width="1" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></g><g transform="translate(2712,0)"><path stroke-width="1" d="M674 636Q682 636 688 630T694 615T687 601Q686 600 417 472L151 346L399 228Q687 92 691 87Q694 81 694 76Q694 58 676 56H670L382 192Q92 329 90 331Q83 336 83 348Q84 359 96 365Q104 369 382 500T665 634Q669 636 674 636ZM84 -118Q84 -108 99 -98H678Q694 -104 694 -118Q694 -130 679 -138H98Q84 -131 84 -118Z"></path></g><g transform="translate(3769,0)"><path stroke-width="1" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path stroke-width="1" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(500,0)"></path><path stroke-width="1" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(1001,0)"></path></g></g></svg></span>.</li>
+</ul></div></div></div><div class="challenge_output_format"><div class="msB challenge_output_format_title"><p><strong>Output Format</strong></p></div><div class="msB challenge_output_format_body"><div class="hackdown-content"><style id="MathJax_SVG_styles">.MathJax_SVG_Display {text-align: center; margin: 1em 0em; position: relative; display: block!important; text-indent: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; width: 100%}
+.MathJax_SVG .MJX-monospace {font-family: monospace}
+.MathJax_SVG .MJX-sans-serif {font-family: sans-serif}
+.MathJax_SVG {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
+.MathJax_SVG * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.mjx-svg-href {fill: blue; stroke: blue}
+.MathJax_SVG_LineBox {display: table!important}
+.MathJax_SVG_LineBox span {display: table-cell!important; width: 10000em!important; min-width: 0; max-width: none; padding: 0; border: 0; margin: 0}
+</style><svg style="display: none;"><defs id="MathJax_SVG_glyphs"></defs></svg><p>For each query, print the answer in a single line: If he can win the game, print <code>WIN X</code> where <span style="font-size: 100%; display: inline-block;" class="MathJax_SVG" id="MathJax-Element-1-Frame"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.98ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 852.5 936.9" role="img" focusable="false"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><path stroke-width="1" d="M42 0H40Q26 0 26 11Q26 15 29 27Q33 41 36 43T55 46Q141 49 190 98Q200 108 306 224T411 342Q302 620 297 625Q288 636 234 637H206Q200 643 200 645T202 664Q206 677 212 683H226Q260 681 347 681Q380 681 408 681T453 682T473 682Q490 682 490 671Q490 670 488 658Q484 643 481 640T465 637Q434 634 411 620L488 426L541 485Q646 598 646 610Q646 628 622 635Q617 635 609 637Q594 637 594 648Q594 650 596 664Q600 677 606 683H618Q619 683 643 683T697 681T738 680Q828 680 837 683H845Q852 676 852 672Q850 647 840 637H824Q790 636 763 628T722 611T698 593L687 584Q687 585 592 480L505 384Q505 383 536 304T601 142T638 56Q648 47 699 46Q734 46 734 37Q734 35 732 23Q728 7 725 4T711 1Q708 1 678 1T589 2Q528 2 496 2T461 1Q444 1 444 10Q444 11 446 25Q448 35 450 39T455 44T464 46T480 47T506 54Q523 62 523 64Q522 64 476 181L429 299Q241 95 236 84Q232 76 232 72Q232 53 261 47Q262 47 267 47T273 46Q276 46 277 46T280 45T283 42T284 35Q284 26 282 19Q279 6 276 4T261 1Q258 1 243 1T201 2T142 2Q64 2 42 0Z"></path></g></svg></span> is the number of different moves Bob can make. Otherwise, print <code>LOSE</code>.</p></div></div></div><div class="challenge_sample_input"><div class="msB challenge_sample_input_title"><p><strong>Sample Input 0</strong></p></div><div class="msB challenge_sample_input_body"><div class="hackdown-content"><style id="MathJax_SVG_styles">.MathJax_SVG_Display {text-align: center; margin: 1em 0em; position: relative; display: block!important; text-indent: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; width: 100%}
+.MathJax_SVG .MJX-monospace {font-family: monospace}
+.MathJax_SVG .MJX-sans-serif {font-family: sans-serif}
+.MathJax_SVG {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
+.MathJax_SVG * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.mjx-svg-href {fill: blue; stroke: blue}
+</style><svg style="display: none;"><defs id="MathJax_SVG_glyphs"></defs></svg><div class="highlight"><pre><span class="err">2</span>
+<span class="err">2</span>
+<span class="err">.K</span>
+<span class="err">.K</span>
+<span class="err">2</span>
+<span class="err">K.</span>
+<span class="err">XX</span>
+</pre></div>
+</div></div></div><div class="challenge_sample_output"><div class="msB challenge_sample_output_title"><p><strong>Sample Output 0</strong></p></div><div class="msB challenge_sample_output_body"><div class="hackdown-content"><style id="MathJax_SVG_styles">.MathJax_SVG_Display {text-align: center; margin: 1em 0em; position: relative; display: block!important; text-indent: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; width: 100%}
+.MathJax_SVG .MJX-monospace {font-family: monospace}
+.MathJax_SVG .MJX-sans-serif {font-family: sans-serif}
+.MathJax_SVG {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
+.MathJax_SVG * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.mjx-svg-href {fill: blue; stroke: blue}
+</style><svg style="display: none;"><defs id="MathJax_SVG_glyphs"></defs></svg><div class="highlight"><pre><span class="err">WIN 2</span>
+<span class="err">LOSE</span>
+</pre></div>
+</div></div></div><div class="challenge_explanation"><div class="msB challenge_explanation_title"><p><strong>Explanation 0</strong></p></div><div class="msB challenge_explanation_body"><div class="hackdown-content"><style id="MathJax_SVG_styles">.MathJax_SVG_Display {text-align: center; margin: 1em 0em; position: relative; display: block!important; text-indent: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; width: 100%}
+.MathJax_SVG .MJX-monospace {font-family: monospace}
+.MathJax_SVG .MJX-sans-serif {font-family: sans-serif}
+.MathJax_SVG {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
+.MathJax_SVG * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.mjx-svg-href {fill: blue; stroke: blue}
+.MathJax_SVG_LineBox {display: table!important}
+.MathJax_SVG_LineBox span {display: table-cell!important; width: 10000em!important; min-width: 0; max-width: none; padding: 0; border: 0; margin: 0}
+</style><svg style="display: none;"><defs id="MathJax_SVG_glyphs"></defs></svg><ul>
+<li>Query 1:</li>
+</ul>
+
+<p>Bob will move king from <span style="font-size: 100%; display: inline-block;" class="MathJax_SVG" id="MathJax-Element-1-Frame"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="5.168ex" height="2.843ex" style="vertical-align: -0.838ex;" viewBox="0 -863.1 2225.2 1223.9" role="img" focusable="false"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><path stroke-width="1" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path><g transform="translate(389,0)"><path stroke-width="1" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><g transform="translate(890,0)"><path stroke-width="1" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path></g><g transform="translate(1335,0)"><path stroke-width="1" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><g transform="translate(1835,0)"><path stroke-width="1" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g></g></svg></span> to <span style="font-size: 100%; display: inline-block;" class="MathJax_SVG" id="MathJax-Element-2-Frame"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="5.168ex" height="2.843ex" style="vertical-align: -0.838ex;" viewBox="0 -863.1 2225.2 1223.9" role="img" focusable="false"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><path stroke-width="1" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path><g transform="translate(389,0)"><path stroke-width="1" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><g transform="translate(890,0)"><path stroke-width="1" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path></g><g transform="translate(1335,0)"><path stroke-width="1" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g><g transform="translate(1835,0)"><path stroke-width="1" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g></g></svg></span> or <span style="font-size: 100%; display: inline-block;" class="MathJax_SVG" id="MathJax-Element-3-Frame"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="5.168ex" height="2.843ex" style="vertical-align: -0.838ex;" viewBox="0 -863.1 2225.2 1223.9" role="img" focusable="false"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><path stroke-width="1" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path><g transform="translate(389,0)"><path stroke-width="1" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g><g transform="translate(890,0)"><path stroke-width="1" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path></g><g transform="translate(1335,0)"><path stroke-width="1" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><g transform="translate(1835,0)"><path stroke-width="1" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g></g></svg></span>. Then, the second player will have to move one of the kings in the corner (up-left) and Bob will move the second king to the corner. </p>
+
+<p><img src="./Bob&#39;s Game _ University CodeSprint 3 Question _ Contests _ HackerRank_files/1493448844-5e4cd1fadc-king7.png" alt="image" title=""></p>
+
+<ul>
+<li>Query 2:</li>
+</ul>
+
+<p>In this case, Bob has no move.</p></div></div></div>
+            </div>
+            
+
+            
+        </div>
+
+        <aside class="span-sm-4 pull-right fullscreen-hide challenge-sidebar">
+            <div class="challenge-sidebar-container">
+
+<div class="social-share-wrap-2"><div class="social-share-view-2 social-buttons plR mlB pull-left full-width">
+  <a class="social-btn cursor facebook-share-btn msL inline-block txt-white">
+    <i class="icon-facebook"></i>
+  </a>
+
+  <a class="social-btn cursor twitter-share-btn msL inline-block txt-white txt-white">
+    <i class="icon-twitter"></i>
+  </a>
+
+  <a class="social-btn cursor linkedin-share-btn msL inline-block txt-white">
+    <i class="icon-linkedin"></i>
+  </a>
+</div>
+</div>
+
+<span class="header_countdowntimer"></span>
+
+<div class="countdowntimer"></div>
+
+
+
+
+
+<div class="sidebar_problem_difficulty">
+
+
+    <p class="bold zeta">Submissions:</p>
+    
+    <a href="https://www.hackerrank.com/contests/university-codesprint-3/challenges/bobs-game/leaderboard" data-analytics="ChallengeViewHackerCount" data-attr1="bobs-game">1200</a>
+    
+
+
+    <div>
+        <p class="bold zeta">Max Score:</p>
+            <p class="sidebar_att">
+            
+            50
+            
+            </p>
+    </div>
+
+
+    <div>
+        
+          <p class="bold zeta">Difficulty: </p>
+          <p class="sidebar_att">
+              
+                  Medium
+              
+          </p>
+        
+    </div>
+
+
+</div>
+
+<div class="challenge-rating rating">
+  <p class="bold zeta">Rate This Challenge: </p>
+  
+    <i class="icon--single icon-star-empty cursor" data-analytics="RatedChallenge" data-attr7="1"></i>
+  
+    <i class="icon--single icon-star-empty cursor" data-analytics="RatedChallenge" data-attr7="2"></i>
+  
+    <i class="icon--single icon-star-empty cursor" data-analytics="RatedChallenge" data-attr7="3"></i>
+  
+    <i class="icon--single icon-star-empty cursor" data-analytics="RatedChallenge" data-attr7="4"></i>
+  
+    <i class="icon--single icon-star-empty cursor" data-analytics="RatedChallenge" data-attr7="5"></i>
+  
+  <span class="rating_reply color-alt-grey hidden psL">Thanks!</span>
+  <div class="rating_feedback hidden">
+    <p class="small color-alt-grey msT">How can we improve?</p>
+    <button class="btn btn-standard bb-rate-challenge msT" data-analytics="RatingFeedback">Let us know</button>
+  </div>
+</div>
+
+
+
+
+
+
+<div id="sidebar-more-options" class="hide">
+  <div class="mlB mlT">
+      <a class="challenge-sidebar-anchor pointer" href="https://www.hackerrank.com/rest/contests/university-codesprint-3/challenges/bobs-game/download_pdf?language=English" target="_blank" id="pdf-link" data-analytics="ChallengeViewSidebarPDF" data-attr1="bobs-game" style="color:#979faf;"><i class="icon-download"></i>Download problem statement</a>
+  </div>
+  <div class="mlB">
+    <a class="challenge-sidebar-anchor pointer" href="https://www.hackerrank.com/rest/contests/university-codesprint-3/challenges/bobs-game/download_testcases" target="_blank" id="test-cases-link" data-analytics="ChallengeViewSidebarTestCases" data-attr1="bobs-game" style="color:#979faf;"><i class="icon-download"></i>
+      
+        Download all test cases
+      
+    </a>
+  </div>
+  <div class="fullscreen-hide">
+      <a href="https://www.hackerrank.com/#" class="challenge-sidebar-anchor js-suggest-edits challenge_suggestion-toggle fullscreen-hide" data-analytics="ChallengeViewSuggestEdit" data-attr1="bobs-game" style="color:#979faf;"><i class="icon-edit"></i>Suggest Edits</a>
+
+      <div class="challenge_suggestion fullscreen-hide row">
+          <div class="span16">
+              <div class="formgroup text-center">
+                  <div class="alert error hide"></div>
+                  <div class="alert success hide">Suggestion Sent!</div>
+              </div>
+              <form id="suggestion-form" class="hide challenge_suggestion-form fullscreen-hide">
+                  <p class="challenge_suggestion-header pdB">Thanks for helping us refine this problem statement. Please address your suggestions below. </p>
+                  <textarea id="suggestion" rows="10" width="100" class="tall challenge_suggestion-input"></textarea>
+                  <div class="challenge_suggestion-buttons access-buttons clearfix">
+                      <div class="pull-right mlB">
+                          <button class="btn btn-green js-suggestion-save pull-right" data-analytics="Submit Suggestion">Submit Suggestion</button>
+                          <button class="btn btn-text js-suggestion-cancel pull-right" data-analytics="Cancel Suggestion">Cancel</button>
+                      </div>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+  <div class="language-selector pmT">
+    
+    <div class="psT hide small color-alt-grey" id="preference-msg">
+    <a class="language-preference btn btn-small msB" href="https://www.hackerrank.com/#">Set as default</a><br>
+    <p class="mjB">You can always change back later.</p>
+    </div>
+  </div>
+</div>
+<div class="msB"><a id="sidebar-more-button" class="challenge-sidebar-anchor pointer">More</a></div>
+
+
+
+
+</div></aside>
+    </div>
+</div>
+</div><div class="challenge-request"><div class="challenge-input codeeditor-wrapper container fs-container mlB"><div id="codeshell-wrapper">
+<div class="clearfix grey-header fixed-hand0 cap plL plR psT psB" style="position: relative;">
+  <div class="msT pull-left"><em id="status-text"></em></div>
+  
+  
+  <div class="pull-right">
+    
+    <div class="inline large lines inverse pull-right msT msL">
+      
+      
+      <a class="restorefullscreen force-hide active-link no-select">
+          <i class="icon-resize-small-alt icon--grey no-select"></i></a>
+      <a class="fullscreen active-link no-select" data-analytics="Switch to fullscreen"><i class="icon-resize-full-alt icon--grey no-select"></i></a>
+      
+      
+      
+      <a class="hide" style="display:none;"></a>
+      <div class="settings-editor" style="position:relative; margin-left: 0px;">
+        <a class="cursor no-select" data-analytics="CodeShellShowPreferences" id="show-preferences"><i class="icon-cog icon--grey no-select"></i></a>
+        <div id="pref-pane" style="position: absolute;right: -0.5em;top: 2em;z-index: 9;background: #fff;border: 1px solid #ddd;border-radius: 5px;padding: 10px;  width: 25em; display: none;">
+          <div style="position: absolute;width: 0;right: 0.8em;height: 0;border-left: 7px solid transparent;border-right: 7px solid transparent;border-bottom: 7px solid #ddd;top: -0.4em;"></div>
+          
+            <div class="formgroup horizontal">
+              <label class="span5">Editor Mode</label>
+              <div class="inline">
+                <div class="btn-group no-select">
+                  <a data-analytics="CodeShellEditorMode" data-attr1="Emacs" class="cursor emacs btn btn-small btn-white editor-mode-button no-select" data-editor="emacs">Emacs</a>
+                  <a data-analytics="CodeShellEditorMode" data-attr1="Normal" class="cursor default btn btn-small btn-white editor-mode-button no-select btn-primary" data-editor="sublime">Normal</a>
+                  <a data-analytics="CodeShellEditorMode" data-attr1="Vim" class="cursor vim btn btn-small btn-white editor-mode-button no-select" data-editor="vim">Vim</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="formgroup horizontal">
+              <label class="span5">Editor Theme</label>
+              <div class="inline">
+                <div class="btn-group no-select">
+                  <a data-analytics="CodeShellEditorTheme" data-attr1="Light" class="cursor light btn btn-small btn-white editor-theme-button no-select btn-primary" data-editor="light">Light</a>
+                  <a data-analytics="CodeShellEditorTheme" data-attr1="Dark" class="cursor dark btn btn-small btn-white editor-theme-button no-select" data-editor="dark">Dark</a>
+                </div>
+              </div>
+            </div>
+          
+          <div class="formgroup horizontal">
+            <label class="span5">Tab Spaces</label>
+            <div class="inline">
+              <div class="btn-group no-select">
+                <a data-analytics="CodeShellEditorSpace" data-attr1="2" class="cursor 2space btn btn-small btn-white editor-tabspace-button no-select" data-editor="2">2 spaces</a>
+                <a data-analytics="CodeShellEditorSpace" data-attr1="4" class="cursor 4space  btn btn-small btn-white editor-tabspace-button no-select btn-primary" data-editor="4">4 spaces</a>
+                <a data-analytics="CodeShellEditorSpace" data-attr1="8" class="cursor 8space btn btn-small btn-white editor-tabspace-button no-select" data-editor="8">8 spaces</a>
+              </div>
+            </div>
+          </div>
+          
+            <div class="formgroup horizontal">
+              <label class="span5">Intellisense
+              
+              <span class="js-tooltip" data-toggle="tooltip" data-placement="bottom" title="Available only for C, C++, Java, Python, JavaScript, Ruby, PHP, C# and Go" data-attr1="CodeCompletion">
+              
+              <i class="icon-info-circled fnt-sz-small txt-navy"></i>
+              </span></label>
+              <div class="inline">
+                <div class="btn-group no-select">
+                  <a data-analytics="CodeShellAutoComplete" data-attr1="Enable" class="cursor emacs btn btn-small btn-white editor-autocomplete-button no-select btn-primary" data-editor="true">Enable</a>
+                  <a data-analytics="CodeShellAutoComplete" data-attr1="Disable" class="cursor default btn btn-small btn-white editor-autocomplete-button no-select" data-editor="false">Disable</a>
+                </div>
+              </div>
+            </div>
+          
+          
+        </div>
+      </div>
+      
+    </div>
+    
+    <div class="pull-right lang-placeholder">
+      <div class="dummy-lang-container hide"></div>
+      <div class="select2-container" id="s2id_select-lang"><a href="javascript:void(0)" onclick="return false;" class="select2-choice" tabindex="-1">   <span>C</span><abbr class="select2-search-choice-close"></abbr>   <div><b></b></div></a><input class="select2-focusser select2-offscreen" type="text" id="s2id_autogen1"><div class="select2-drop select2-display-none">   <div class="select2-search select2-search-hidden select2-offscreen">       <input type="text" autocomplete="off" autocorrect="off" autocapitilize="off" spellcheck="false" class="select2-input">   </div>   <ul class="select2-results">   </ul></div></div><input type="hidden" id="select-lang" tabindex="-1" class="select2-offscreen" value="c">
+    </div>
+    
+    <div class="clearfix"></div>
+  </div>
+</div>
+
+<div class="hr_tour-code-solution movable-hand flex-row" style="display: flex;">
+  
+  <div class="code-checker">
+    <div id="notification-message" class="clearfix grey-header cap  hidden "> </div>
+    <div class="code-editors" style="max-height: 580px;">
+      
+       <div class="loading-mode" style="display: none;">Loading Editor... </div> 
+      <div class="code-body" style="display: block;">
+        
+       <textarea id="codeview" style="width: 100%; display: none;"></textarea><div class="CodeMirror cm-s-default CodeMirror-wrap"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 5px; left: 60px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-vscrollbar" tabindex="-1" cm-not-content="true" style="width: 18px; pointer-events: none;"><div style="min-width: 1px; height: 0px;"></div></div><div class="CodeMirror-hscrollbar" tabindex="-1" cm-not-content="true" style="height: 18px; pointer-events: none;"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 55px; margin-bottom: 0px; border-right-width: 30px; min-height: 468px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>23</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"><div class="CodeMirror-cursor" style="left: 4px; top: 0px; height: 20px;">&nbsp;</div></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -55px; width: 55px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -55px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px;">1</div><div class="CodeMirror-gutter-elt" style="left: 45px; width: 9px;"><div class="CodeMirror-foldgutter-open CodeMirror-guttermarker-subtle"></div></div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-meta">#include &lt;math.h&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -55px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-meta">#include &lt;stdio.h&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -55px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px;">3</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-meta">#include &lt;string.h&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -55px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px;">4</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-meta">#include &lt;stdlib.h&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -55px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px;">5</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-meta">#include &lt;assert.h&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -55px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px;">6</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-meta">#include &lt;limits.h&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -55px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px;">7</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-meta">#include &lt;stdbool.h&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -55px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px;">8</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -55px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px;">9</div><div class="CodeMirror-gutter-elt" style="left: 45px; width: 9px;"><div class="CodeMirror-foldgutter-open CodeMirror-guttermarker-subtle"></div></div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-type">int</span> <span class="cm-def">main</span>() {</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -55px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px;">10</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-type">int</span> <span class="cm-variable">q</span>; </span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -55px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px;">11</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">scanf</span>(<span class="cm-string">"%i"</span>, <span class="cm-operator">&amp;</span><span class="cm-variable">q</span>);</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -55px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px;">12</div><div class="CodeMirror-gutter-elt" style="left: 45px; width: 9px;"><div class="CodeMirror-foldgutter-open CodeMirror-guttermarker-subtle"></div></div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">for</span>(<span class="cm-type">int</span> <span class="cm-variable">a0</span> <span class="cm-operator">=</span> <span class="cm-number">0</span>; <span class="cm-variable">a0</span> <span class="cm-operator">&lt;</span> <span class="cm-variable">q</span>; <span class="cm-variable">a0</span><span class="cm-operator">++</span>){</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -55px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px;">13</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-type">int</span> <span class="cm-variable">n</span>; </span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -55px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px;">14</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">scanf</span>(<span class="cm-string">"%i"</span>, <span class="cm-operator">&amp;</span><span class="cm-variable">n</span>);</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -55px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px;">15</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-type">char*</span> <span class="cm-type">*</span><span class="cm-variable">board</span> <span class="cm-operator">=</span> <span class="cm-variable">malloc</span>(<span class="cm-keyword">sizeof</span>(<span class="cm-type">char*</span>) <span class="cm-operator">*</span> <span class="cm-variable">n</span>);</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -55px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px;">16</div><div class="CodeMirror-gutter-elt" style="left: 45px; width: 9px;"><div class="CodeMirror-foldgutter-open CodeMirror-guttermarker-subtle"></div></div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-keyword">for</span> (<span class="cm-type">int</span> <span class="cm-variable">board_i</span> <span class="cm-operator">=</span> <span class="cm-number">0</span>; <span class="cm-variable">board_i</span> <span class="cm-operator">&lt;</span> <span class="cm-variable">n</span>; <span class="cm-variable">board_i</span><span class="cm-operator">++</span>) {</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -55px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px;">17</div><div class="CodeMirror-gutter-elt" style="left: 45px; width: 9px;"><div class="CodeMirror-foldgutter-open CodeMirror-guttermarker-subtle"></div></div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  <span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-variable">board</span>[<span class="cm-variable">board_i</span>] <span class="cm-operator">=</span> (<span class="cm-type">char</span> <span class="cm-type">*</span>)<span class="cm-variable">malloc</span>(<span class="cm-number">10240</span> <span class="cm-operator">*</span> <span class="cm-keyword">sizeof</span>(<span class="cm-type">char</span>));</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -55px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px;">18</div><div class="CodeMirror-gutter-elt" style="left: 45px; width: 9px;"><div class="CodeMirror-foldgutter-open CodeMirror-guttermarker-subtle"></div></div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  <span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-variable">scanf</span>(<span class="cm-string">"%s"</span>,<span class="cm-variable">board</span>[<span class="cm-variable">board_i</span>]);</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -55px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px;">19</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  }</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -55px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px;">20</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">// Write Your Code Here</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -55px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px;">21</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  }</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -55px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px;">22</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">return</span> <span class="cm-number">0</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -55px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 21px;">23</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 30px; width: 1px; border-bottom: 0px solid transparent; top: 468px;"></div><div class="CodeMirror-gutters" style="height: 498px; left: 0px;"><div class="CodeMirror-gutter CodeMirror-lint-markers"></div><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 29px;"></div><div class="CodeMirror-gutter CodeMirror-foldgutter"></div></div></div></div>
+       </div>
+      
+      <div class="clearfix"></div>
+    </div>
+    <div id="codeeditor-statusbar" class="clearfix psA codeeditor_statusbar">
+      <span id="statusbar-mode"></span>
+      <div class="pull-right">
+        <span id="statusbar-line">Line: 1</span>
+        <span id="statusbar-col">Col: 1</span>
+        <span id="statusbar-count"></span>
+      </div>
+    </div>
+  </div>
+</div><div class="clearfix pmR pmL pmB plT fixed-hand1 codeshell-footer">
+  <div class="pull-right">
+    
+    
+    <button class="btn bb-compile msR " data-analytics="Compile and Test">Run Code</button>
+    
+    
+    <button class="btn btn-primary bb-submit ans-submit" data-analytics="Submit Code">Submit Code</button>
+    
+    
+  </div>
+  <div class="pull-left inline">
+      
+      <button class="btn btn-text upload_file mlR" data-analytics="Upload File" type="button"><i class="icon-upload"></i>Upload Code as File</button>
+      
+      
+      
+      <div class="mmT">
+          <label for="customtestcase"><div class="custom-checkbox-v3"><input type="checkbox" id="customtestcase"><span></span></div><span class="lmT msL">Test against custom input</span></label>
+          
+          <textarea rows="5" id="custominput" style="display:none"></textarea>
+          
+      </div>
+      
+  </div>
+  
+</div></div><div id="submission-message"></div></div>
+</div><div class="challenge-response container fs-container"><h5 class="output-progress padded light-wrap hide mlT mlB psT" style="padding-top: 100px; padding-bottom: 100px; text-align: center;"></h5>
+<div class="output-area-wrap hide">
+  <div class="output-area mlT psT hide" id="output-area"></div>
+</div></div><div class="challenge-copyright"></div></div></div>
+    </section>
+</div>
+</div></div>
+        <div id="hacker"></div>
+    </div>
+    <div id="autocomplete-container" style="position:absolute; width: 330px; z-index: 2000; padding-top: 1px;"><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content theme-m-content" id="ui-id-3" tabindex="0" style="display: none;"></ul></div>
+    <footer class="page_footer">
+    <div>
+        <div class="text-center">
+            <p style="font-size: 14px; margin-top: 5px; margin-bottom: 0px;">
+              <span class="internal-links">
+                <a target="_blank" href="https://www.hackerrank.com/calendar?utm_source=website&amp;utm_medium=footer&amp;utm_campaign=website" class="calendar" data-analytics="FooterLinkCalendar">Contest Calendar</a>
+                |
+                <a target="_blank" href="https://www.hackerrank.com/interview/interview-preparation-kit?utm_source=website&amp;utm_medium=footer&amp;utm_campaign=website" class="interview-prep" data-analytics="FooterLinkCalendar">Interview Prep</a>
+                |
+                <a target="_blank" href="https://blog.hackerrank.com/" class="blog" data-analytics="FooterLinkBlog">Blog</a>
+                |
+                <a target="_blank" href="https://www.hackerrank.com/scoring" class="scoring" data-analytics="FooterLinkScoring">Scoring</a>
+                |
+                <a target="_blank" href="https://www.hackerrank.com/environment" class="environment" data-analytics="FooterLinkEnvironment">Environment</a>
+                |
+                <a target="_blank" href="https://www.hackerrank.com/faq" class="faq" data-analytics="FooterLinkFAQ">FAQ</a>
+                |
+              </span>
+              <a target="_blank" href="https://www.hackerrank.com/aboutus" data-analytics="FooterLinkAboutUs">About Us</a>
+              |
+              <a target="_blank" href="https://help.hackerrank.com/hc/en-us" data-analytics="FooterLinkSupport">Support</a>
+              |
+              <a target="_blank" href="https://www.hackerrank.com/careers" data-analytics="FooterLinkCareers">Careers</a>
+              |
+              <a target="_blank" href="https://www.hackerrank.com/terms-of-service" data-analytics="FooterLinkTermsOfService">Terms Of Service</a>
+              |
+              <a target="_blank" href="https://www.hackerrank.com/privacy" data-analytics="FooterLinkPrivacyPolicy">Privacy Policy</a>
+              |
+              <a href="https://www.hackerrank.com/support/feature" target="_blank" class="featureRequestButton" data-analytics="FooterLinkFeatureRequest">Request a Feature</a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+    <ol id="hr_tour-intro-tour" class="hide">
+        <li data-class="hr_tour-challenge-name" data-options="tipLocation:bottom"><h5 class="walkthrough-header">Challenge Walkthrough</h5><span class="walkthrough-text">Let's walk through this sample challenge and explore the features of the code editor.</span><span class="walkthrough-progress">1 of 6</span></li>
+        <li data-class="hr_tour-problem-statement" data-options="tipLocation:top"><h5 class="walkthrough-header">Review the problem statement</h5><span class="walkthrough-text">Each challenge has a problem statement that includes sample inputs and outputs. Some challenges include additional information to help you out.</span><span class="walkthrough-progress">2 of 6</span></li>
+        <li data-class="hr_tour-select-language" data-options="tipLocation:left"><h5 class="walkthrough-header">Choose a language</h5><span class="walkthrough-text">Select the language you wish to use to solve this challenge.</span><span class="walkthrough-progress">3 of 6</span></li>
+        <li data-class="hr_tour-code-solution" data-options="tipLocation:top"><h5 class="walkthrough-header">Enter your code</h5><span class="walkthrough-text">Code your solution in our custom editor or code in your own environment and upload your solution as a file.</span><span class="walkthrough-progress">4 of 6</span></li>
+        <li data-class="hr_tour-compile-test" data-options="tipLocation:left"><h5 class="walkthrough-header">Test your code</h5><span class="walkthrough-text">You can compile your code and test it for errors and accuracy before submitting.</span><span class="walkthrough-progress">5 of 6</span></li>
+        <li data-class="hr_tour-submit-code" data-button="Done" data-options="tipLocation:left"><h5 class="walkthrough-header">Submit to see results</h5><span class="walkthrough-text">When you're ready, submit your solution! Remember, you can go back and refine your code anytime.</span><span class="walkthrough-progress">6 of 6</span></li>
+    </ol>
+    <ol id="hr_tour-intro-part-2-tour" class="hide">
+        <li data-class="hr_tour-leaderboard">Check your score</li>
+    </ol>
+    <script type="text/javascript">
+     // disable forum social interaction
+     HR.disable_fsi = false;
+    </script>
+
+    <script type="text/javascript">
+      // Setting up jobs constants for use in frontend
+      // Jobs visa constants - visa's accepted by company
+      HR.VISA_TYPE_NONE = 0
+      HR.VISA_TYPE_ALL = 1
+      HR.VISA_TYPE_US_RESIDENT = 2
+    </script>
+
+    <script type="text/javascript">
+      HR.REACT_ROUTE_CONFIG = {
+  "var1": [],
+  "var2": [],
+  "complete": [
+    "^/domains/?.*$",
+    "^/dashboard/?(\\?.*|$)",
+    "^/interview((\/|\\?).*|$)",
+    "^/contests/((projecteuler)|(hourrank-[0-9]+))(/(?!(judge/)?submissions).*)?$",
+    "^/contests/?((archived|college)(/\\d*)?)?/?(\\?.*|$)",
+    "^/terms-of-service/?(\\?.*|$)",
+    "^/faq-hacker-level/?(\\?.*|$)",
+    "^/privacy/?(\\?.*|$)",
+    "^/leaderboard((/|\\?).*|$)",
+    "^/skills-verification((/|\\?).*|$)",
+    "^/work/login($|\\?|/).*",
+    "^/work/tests((/|\\?).*|$)",
+    "^/work/settings((/|\\?).*|$)",
+    "^/work/settings/data-manager((/|\\?).*|$)",
+    "^/jobs/search/?(\\?.*|$)",
+    "^/jobs/dashboard/.+$",
+    "^/environment(\/?.*|$)",
+    "^/work/library((/|\\?).*|$)",
+    "^/work/projects((/|\\?).*|$)",
+    "^/work/teams((/|\\?).*|$)",
+    "^/calendar/?(\\?.*|$)",
+    "^/snippets((/.*)|(\\?.*)|$)",
+    "^/feed/?(\\?.*|$)",
+    "^/challenges/([^/]+?)(?!/(topics))((/?\\?.*|$)|/.*)",
+    "^/404$",
+    "^/onboarding/?.*$",
+    "^/profile/.*$",
+    "^/scoring($|\\?|/).*",
+    "^/companies/.+$",
+    "^(/auth)?/(login|signup)((/.*)*|\\?.*)$",
+    "^/auth/(forgot_password|reset_password)/?(\\?.*|$)",
+    "^/work/reset_password/(.*|$)",
+    "^/x/reset_password/(.*|$)",
+    "^/[^/]*/activity/?(\\?.*|$)",
+    "^/work/sourcing($|\\?|/).*",
+    "^/work/404($|\\?|/).*",
+    "^/work/pricing-plans($|\\?|/).*",
+    "^/work/iframe($|\\?|/).*",
+    "^/work/subscribe-now($|\\?|/).*",
+  ]
+}
+;
+      HR.CKEDITOR_URL = "https://hrcdn.net/ckeditor/v4.11.4.2/ckeditor.js"
+    </script>
+
+
+    <!-- Load Jquery -->
+  <script src="./Bob&#39;s Game _ University CodeSprint 3 Question _ Contests _ HackerRank_files/base-4e953f9582ddc0e62ee5b02dbe2520ca.js"></script>
+
+
+
+    <script src="./Bob&#39;s Game _ University CodeSprint 3 Question _ Contests _ HackerRank_files/hackerrank_libraries-c00b11816712764d66dd964a7ca5c705.js" crossorigin="anonymous"></script>
+    <script src="./Bob&#39;s Game _ University CodeSprint 3 Question _ Contests _ HackerRank_files/codeshell-cdffcdf1564c6416e1a2eb207a4521ce.js" crossorigin="anonymous"></script>
+    <script src="./Bob&#39;s Game _ University CodeSprint 3 Question _ Contests _ HackerRank_files/hackerrank-5cd8d81ac5f4006b2834a0a6780365b0.js" crossorigin="anonymous"></script>
+    <script src="./Bob&#39;s Game _ University CodeSprint 3 Question _ Contests _ HackerRank_files/set-manifest-496ed4b2eee7ad77a31bffdbc7bb9d9eabc4b478.js" crossorigin="anonymous"></script>
+    <script src="./Bob&#39;s Game _ University CodeSprint 3 Question _ Contests _ HackerRank_files/require-76e24a0ace8716757c96e986f7dc9e07.js" crossorigin="anonymous"></script>
+    <script src="./Bob&#39;s Game _ University CodeSprint 3 Question _ Contests _ HackerRank_files/dashboard-183d9c4c0e5680a01b67b78570aa29f6.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- jsCookies -->
+
+
+<script type="text/javascript">
+  window.extern_script_delay = 0;
+  if (window.PRODUCT_NAMESPACE === 'hackerrank' && typeof($) === "function") {
+    $(window).on("load", function(){
+      if (('performance' in window) && ('timing' in window.performance)) {
+        dom_time = window.performance.timing.domInteractive - window.performance.timing.navigationStart;
+        if (dom_time > 12000) {
+          window.extern_script_delay = 3000;
+        } else if (dom_time > 7000) {
+          window.extern_script_delay = 2000;
+        } else if (dom_time > 6000) {
+          window.extern_script_delay = 1000;
+        }
+      }
+    });
+  }
+</script>
+
+<script>
+</script>
+
+<script>
+</script>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  $(window).on("load", function() {
+    setTimeout(function() {
+    (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })();
+    }, window.extern_script_delay);
+  });
+</script>
+
+<!-- Mixpanel Stub -->
+<script type="text/javascript">
+  window.mixpanel = window.mixpanel || [];
+  var attrs = "disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");
+  for (var attribute in attrs) {
+      mixpanel[attrs[attribute]] = function () {};
+  }
+</script>
+
+<script type="text/javascript">
+  if (window.dataLayer) {
+
+  }
+</script>
+
+
+    <!-- End of hackerrank Zendesk Widget script -->
+
+<!-- Filepicker -->
+<script type="text/javascript">
+  $(window).on("load", function() {
+    setTimeout(function() {
+    (function(a){if(window.filepicker){return}var b=a.createElement("script");b.type="text/javascript";b.async=!0;b.src=("https:"===a.location.protocol?"https:":"http:")+"//api.filepicker.io/v2/filepicker.js";var c=a.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c);var d={};d._queue=[];var e="pick,pickMultiple,pickAndStore,read,write,writeUrl,export,convert,store,storeUrl,remove,stat,setKey,constructWidget,makeDropPane".split(",");var f=function(a,b){return function(){b.push([a,arguments])}};for(var g=0;g<e.length;g++){d[e[g]]=f(e[g],d._queue)}window.filepicker=d})(document);
+    filepicker.setKey("ApehXMbvXTWqWab7OmMr9z");
+    }, window.extern_script_delay);
+  });
+</script>
+
+<script type="text/javascript">
+  window._fbq = window._fbq || [];
+</script>
+
+<!-- bizible -->
+<script>
+  $(window).on("load", function() {
+    setTimeout(function() {
+    (function(d, t) {
+      var g = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      g.src = '//cdn.bizible.com/scripts/bizible.js';
+      s.parentNode.insertBefore(g, s);
+    }(document, 'script'));
+    }, window.extern_script_delay);
+  });
+</script>
+
+
+<script type="text/javascript">
+
+    !function(obj){window.hr_metrics=obj,obj.loaded=!0,obj.config=obj.config||{},obj._b=obj._b||[],obj.init=function(options){this.config=$.extend({product:null,use_cookie:!1,uid_cookie_key:null,session_cookie_key:null,session_id:null,uid_token:null,uid_token_cookie_key:null,uid:Math.floor(1e12*(1+Math.random())).toString(16),metrics_endpoint:null,batch_track_interval:2e3,enable_gtm:!1},this.config||{},options||{})},obj.get_session_id=function(){return this.config.session_id?this.config.session_id:this.config.session_cookie_key?$.cookie(this.config.session_cookie_key):null},obj.get_uid_data=function(){return this.config.use_cookie?{uid:$.cookie(this.config.uid_cookie_key),uid_token:$.cookie(this.config.uid_token_cookie_key)}:{uid:this.config.uid,uid_token:this.config.uid_token}},obj.get_session_params=function(){var session_params={session_landing_url:$.cookie("session_landing_url"),session_referrer:$.cookie("session_referrer"),session_referring_domain:$.cookie("session_referring_domain")};try{var utm_params=$.cookie("session_utm_params");utm_params&&(utm_params=JSON.parse(utm_params),session_params.session_utm_source=utm_params.s,session_params.session_utm_medium=utm_params.m,session_params.session_utm_campaign=utm_params.c)}catch(e){}return session_params},obj.track=function(event_name,event_value,attrs,use_beacon){var common_attrs={session_id:this.get_session_id()},attrs=$.extend({},attrs,common_attrs,this.get_session_params()),_tracking_data=$.extend({product:this.config.product,event_name:event_name,event_value:event_value,params:attrs},this.get_uid_data());this._post_tracking_data(_tracking_data,use_beacon),this._push_to_gtm(event_name,event_value,attrs)},obj.batch_track=function(event_name,event_value,attrs,use_beacon){this._EVENT_ARRAY=this._EVENT_ARRAY||[];var common_attrs={session_id:this.get_session_id()},attrs=$.extend({},attrs,common_attrs),_tracking_data={event_name:event_name,event_value:event_value,params:attrs};this._EVENT_ARRAY.push({time:(new Date).getTime(),url:document.location.href,track_data:_tracking_data}),this._event_batch_track_id||(this._event_batch_track_id=window.setInterval(function(that){return function(){that.batch_track_record()}}(this),this.config.batch_track_interval)),this._push_to_gtm(event_name,event_value,attrs)},obj.batch_track_record=function(use_beacon){if("object"==typeof this._EVENT_ARRAY&&this._EVENT_ARRAY.length>0){var _tracking_data_array=this._EVENT_ARRAY;this._EVENT_ARRAY=[];var _tracking_data=$.extend({product:this.config.product,batch_request:"true",current_time:(new Date).getTime(),data_array:JSON.stringify(_tracking_data_array),session_params:JSON.stringify(this.get_session_params())},this.get_uid_data());this._post_tracking_data(_tracking_data,use_beacon)}},obj._post_tracking_data=function(data,use_beacon){var metrics_endpoint=this.config.metrics_endpoint;if(use_beacon===!0&&"object"==typeof window.navigator&&"function"==typeof window.navigator.sendBeacon){var jsonContent="params_stream="+encodeURIComponent(JSON.stringify(data)),_json_blob=new Blob([jsonContent],{type:"application/x-www-form-urlencoded; charset=UTF-8"});window.navigator.sendBeacon(metrics_endpoint,_json_blob)}else $.ajax({type:"POST",url:metrics_endpoint,crossDomain:!0,xhrFields:{withCredentials:!0},beforeSend:function(xhr){return!0},data:data})},obj._push_to_gtm=function(event_name,event_value,attrs){this.config.enable_gtm&&window.dataLayer&&window.dataLayer.push({event:"track",eventName:event_name,eventValue:event_value,eventAttrs:attrs})},function(o){if(Array.isArray(o._b)){for(var i=0;i<o._b.length;i++){var e=o._b[i];o[e[0]]&&"function"==typeof o[e[0]]&&o[e[0]].apply(o,e[1])}o._b=[]}}(obj)}(window.hr_metrics||{});
+//# sourceMappingURL=https://staging.hackerrank.net/assets/sourcemaps/hr_metrics-ec12c440e5fad784865a8eea2be0bede.js.map
+
+  (function() {
+    hr_metrics.init({
+      product: 'hackerrank',
+      use_cookie: true,
+      uid_cookie_key: 'hackerrank_mixpanel_token',
+      uid_token_cookie_key: 'metrics_user_identifier',
+      session_cookie_key: 'session_id',
+      metrics_endpoint: 'https://metrics.hackerrank.com/metrics',
+      enable_gtm: true
+    });
+  })();
+
+  //tracking hrutm_ parameters
+  $(window).on("load", function() {
+    (function(){
+      var sPageURL = window.location.search.substring(1);
+      var sURLVariables = sPageURL.split('&');
+      var trackingData;
+      for(var i = 0; i < sURLVariables.length; i++) {
+        var sParameterName = sURLVariables[i].split('=');
+        if(sParameterName[0] == 'utm_source') {
+          trackingData = decodeURIComponent(escape(sParameterName[1]));
+          hr_metrics.batch_track(trackingData.event_name, trackingData)
+        } else if (sParameterName[0] == 'ad-campaign' && sParameterName[1]=='Mkt1010415') {
+          if(typeof HR !== "undefined" && HR !== null && (!HR.PREFETCH_DATA.profile || !HR.PREFETCH_DATA.profile.created_at)){
+            document.cookie = "fb_ad_campaign_source="+sParameterName[1]+";path=/";
+          }
+        }
+      }
+    })();
+
+    if(typeof HR !== "undefined" && HR !== null && HR.PREFETCH_DATA && HR.PREFETCH_DATA.profile &&  HR.PREFETCH_DATA.profile.created_at) {
+      if($.cookie('fb_ad_campaign_source')) {
+        window._fbq.push(['track', '6023409928156', {'value':'0.01','currency':'USD'}]);
+        $.removeCookie('fb_ad_campaign_source', { path: '/' });
+      }
+    }
+  });
+</script>
+
+  <script type="text/javascript">
+    window.hr_metrics_extension_track = true;
+
+      !function(obj){window.hr_metrics=obj,obj.externalService=function(event_type,event_value,attrs,service){attrs="undefined"!=typeof attrs?attrs:{},attrs.session_id=this.get_session_id(),service="undefined"!=typeof service?service:"mixpanel:heap",external_services=service.split(":")},obj.app_track=function(key,attrs){window.APP_METRICS=window.APP_METRICS||[],common_attrs={uid:$.cookie("hackerrank_mixpanel_token")},attrs=$.extend({},attrs,common_attrs),window.APP_METRICS.push({key:key,meta_data:attrs}),window.app_track_interval_id||(window.app_track_interval_id=window.setInterval(hr_metrics._send_app_track_data,5e3))},obj._send_app_track_data=function(){if(window.APP_METRICS&&window.APP_METRICS.constructor===Array&&!(window.APP_METRICS.length<=0)){var track_data={data:window.APP_METRICS};window.APP_METRICS=[];var metrics_endpoint="https://metrics.hackerrank.com/app_metrics";window.HR&&window.HR.development&&(metrics_endpoint="/app_metrics"),"function"==typeof moment&&"function"==typeof moment.tz&&(track_data.local_timezone=moment.tz.guess()),track_data.default_cdn_url=jsCookies.get("default_cdn_url"),track_data.document_referrer=document.referrer,$.ajax({type:"POST",url:metrics_endpoint,crossDomain:!0,xhrFields:{withCredentials:!0},beforeSend:function(xhr){return!0},data:JSON.stringify(track_data),dataType:"json",contentType:"application/json"})}},obj.track_dwell_time=function(pathname,use_beacon){if(this._navigation_data&&this._navigation_data.page==pathname){var time_now=(new Date).getTime();this.batch_track("DwellTime",pathname,{attribute7:parseInt((time_now-(this._navigation_data.time||time_now))/1e3)},use_beacon)}},obj.set_navigation_data=function(pathname){this._navigation_data={page:pathname||document.location.pathname,time:(new Date).getTime()}},window.APP_METRIC_TRACKING_ENABLED&&"performance"in window&&"timing"in window.performance&&$(window).on("load",function(){setTimeout(function(){if(timing=window.performance.timing,obj={referring_url:window.location.pathname,fullLoadTime:timing.loadEventEnd-timing.navigationStart,loadTime:timing.loadEventEnd-timing.fetchStart,domReadyTime:timing.domComplete-timing.domInteractive,readyStart:timing.fetchStart-timing.navigationStart,redirectTime:timing.redirectEnd-timing.redirectStart,appcacheTime:timing.domainLookupStart-timing.fetchStart,unloadEventTime:timing.unloadEventEnd-timing.unloadEventStart,lookupDomainTime:timing.domainLookupEnd-timing.domainLookupStart,connectTime:timing.connectEnd-timing.connectStart,requestTime:timing.responseEnd-timing.requestStart,initDomTreeTime:timing.domInteractive-timing.responseEnd,loadEventTime:timing.loadEventEnd-timing.loadEventStart},"navigation"in window.performance&&"getEntries"in window.performance&&(obj.navigationType=window.performance.navigation.type,obj.navigationRedirectCount=window.performance.navigation.redirectCount,obj.fullLoadTime>8e3))try{var entries=window.performance.getEntries();entries[0].toJSON&&(obj.networkRequests=entries.map(function(e){return e.toJSON()}))}catch(e){}hr_metrics.app_track("page-load-metrics",obj)},1e3)}),$(window).on("load",function(){var _pathname=document.location.pathname,cdn_url_switched=jsCookies.get("cdn_url_switched");""!==cdn_url_switched&&jsCookies.destroy("cdn_url_switched"),hr_metrics.batch_track("PageLoad",_pathname+document.location.search,{attribute1:_pathname,attribute6:cdn_url_switched,cdn_url:jsCookies.get("cdn_url")})})}(window.hr_metrics||{}),function(){"function"==typeof $&&window.hr_metrics_extension_track&&$(window).on("load",function(){var _pathname=document.location.pathname;hr_metrics.track_dwell_time&&(hr_metrics.track_dwell_time(_pathname),hr_metrics.set_navigation_data()),$(window).on("beforeunload",function(){var _pathname=document.location.pathname;hr_metrics.batch_track("PageClose",_pathname+document.location.search,{attribute2:_pathname},!0),hr_metrics.track_dwell_time&&hr_metrics.track_dwell_time(_pathname,!0),window.typingTimeout&&(window.clearTimeout(window.typingTimeout),window.triggerTypingEvent&&window.typingEventEnabled&&window.triggerTypingEvent()),hr_metrics.batch_track_record(!0)})})}();
+//# sourceMappingURL=https://staging.hackerrank.net/assets/sourcemaps/hr_metrics_extension-da53dd05532d1daf5150f31b3a20b90d.js.map
+  </script>
+
+<!-- Load Facebook SDK for JavaScript -->
+<script>
+;(function(){
+  // Function to have a list of functions to load on fbAsyncInit
+  var toLoad = []
+  window.fbReady = function(func){
+    if( typeof func === 'function') {
+      if( window.FB ) {
+        func.call(window)
+      } else {
+        toLoad.push(func)
+      }
+    }
+  }
+
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '347499128655783',
+      xfbml      : true,
+      version    : 'v2.5',
+      caption    : 'HackerRank.com',
+    });
+
+    // Execute all the fbAsyncInit functions
+    toLoad.forEach(function(func){
+      func.call(window)
+    })
+  };
+})();
+/*
+$(window).on("load", function() {
+  setTimeout(function() {
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "//connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  }, window.extern_script_delay);
+});
+*/
+</script>
+<!-- Load Twitter SDK for JavaScript -->
+<script>
+window.twttr = (function() {
+  t = window.twttr || {};
+  if (typeof t.ready === 'undefined') {
+    t._e = [];
+    t.ready = function(f) {
+      t._e.push(f);
+    };
+  }
+  return t;
+})();
+$(window).on("load", function() {
+  setTimeout(function() {
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "https://platform.twitter.com/widgets.js";
+       fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'twitter-wjs'));
+  }, window.extern_script_delay);
+});
+</script>
+
+<script type="text/javascript">
+    if (typeof($) == "function") {
+        $(document).ready(function() {
+            function we_are_hiring() {
+                lines = [
+                    "===============================================================================",
+                    ",--.  ,--.              ,--.                 ,------.                 ,--.     ",
+                    "|  '--'  | ,--,--. ,---.|  |,-. ,---. ,--.--.|  .--. ' ,--,--.,--,--, |  |,-.  ",
+                    "|  .--.  |' ,-.  || .--'|     /| .-. :|  .--'|  '--'.'' ,-.  ||      \\|     /  ",
+                    "|  |  |  |\\ '-'  |\\ `--.|  \\  \\\\   --.|  |   |  |\\  \\ \\ '-'  ||  ||  ||  \\  \\  ",
+                    "`--'  `--' `--`--' `---'`--'`--'`----'`--'   `--' '--' `--`--'`--''--'`--'`--' ",
+                    "===============================================================================",
+                    "  You opened the console! Know some code, do you? Want to work for one of the  ",
+                    "  best startups around? https://www.hackerrank.com/careers                     ",
+                    "==============================================================================="
+                ]
+                for (i = 0; i < lines.length; i ++) {
+                    console.log(lines[i]);
+                }
+            }
+            setTimeout(we_are_hiring, 5000);
+            if(window.trackJs) {
+              trackJs.track("Page Loaded");
+            }
+        });
+    }
+</script>
+
+<!-- Some Black Magic for Internet Explorer -->
+
+<!--[if lt IE 10]>
+<script src="https://hrcdn.net/hackerrank/assets/jquery-plugins/jQuery.XDomainRequest-28488b2668d975b95331be79582a53fc.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6/html5shiv.min.js" type="text/javascript"></script>
+<![endif]-->
+
+<!-- Chrome Frame for IE6 -->
+<!--[if lt IE 7 ]>
+ <script src="https://ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script><script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
+<![endif]-->
+
+<!--[if lte IE 9]>
+<script>
+    IE_BROWSER = true
+</script>
+<![endif]-->
+
+<!-- Track button clicks -->
+<script type="text/javascript">
+    $(document).on('click', 'a, button, input, select, i', null, function(e) {
+        var src = e.currentTarget, $src = $(e.currentTarget);
+        if ($src.attr('data-analytics')) {
+            action = 'Click'; data = $src.attr('data-analytics');
+        } else {
+            return;
+        }
+
+            hr_metrics.batch_track(action, data, (function() {
+                var params={};
+                for (var _i=1; _i<=12; ++_i){
+                    var _attr = 'data-attr'+_i;
+                    if ($src.attr(_attr)){
+                        params['attribute'+_i] = $src.attr(_attr);
+                }}
+                var attributes = src.attributes, attr_length = src.attributes.length;
+                for (var i = 0; i < attr_length; i++){
+                  var attribute = attributes[i];
+                  if (attribute.name.indexOf('data-attr-') === 0){
+                    param_name = attribute.name.substr('data-attr-'.length);
+                    if (param_name.length > 0) {
+                      params[param_name] = attribute.value;
+                    }
+                  }
+                }
+                return params;
+            })());
+        // google analytics
+        _gaq.push(['_trackEvent', 'Events' , action, data])
+    });
+
+    $(document).on('AnalyticsEvent', function(e) {
+        action = e.event_type || false
+        data = e.event_name || false
+
+        if (!action || !data)
+          return
+
+        params = {}
+        params['attribute1'] = e.event_value || ""
+        params['attribute7'] = e.integer_event_value
+
+        if (window.HR && window.HR.current_page)
+          params['attribute2'] = window.HR.current_page
+
+        if (window.HR && window.HR.current_contest)
+          params['attribute3'] = window.HR.current_contest.get('name')
+
+            hr_metrics.batch_track(action, data, params);
+        // google analytics
+        _gaq.push(['_trackEvent', 'Events' , action, data])
+    });
+</script>
+
+
+<!-- Google Tag Manager (noscript) #1 -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FXW96J"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) #1 -->
+
+
+
+<div class="offline-ui offline-ui-up"><div class="offline-ui-content"></div><a href="https://www.hackerrank.com/" class="offline-ui-retry"></a></div><div class="offline-ui offline-ui-up"><div class="offline-ui-content"></div><a href="https://www.hackerrank.com/" class="offline-ui-retry"></a></div><span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span><link rel="stylesheet" href="./Bob&#39;s Game _ University CodeSprint 3 Question _ Contests _ HackerRank_files/animate-702952f12d9729d5ba7d2be8fc590d83.css" media="all"><iframe name="filepicker_comm_iframe" id="filepicker_comm_iframe" src="./Bob&#39;s Game _ University CodeSprint 3 Question _ Contests _ HackerRank_files/saved_resource.html" style="display: none;"></iframe><iframe name="fpapi_comm_iframe" id="fpapi_comm_iframe" src="./Bob&#39;s Game _ University CodeSprint 3 Question _ Contests _ HackerRank_files/saved_resource(1).html" style="display: none;"></iframe><iframe scrolling="no" frameborder="0" allowtransparency="true" src="./Bob&#39;s Game _ University CodeSprint 3 Question _ Contests _ HackerRank_files/widget_iframe.4f8aea4342a4ada72cba2bdffcff6b4d.html" title="Twitter settings iframe" style="display: none;"></iframe></body></html>
