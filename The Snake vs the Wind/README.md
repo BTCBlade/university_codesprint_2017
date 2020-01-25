@@ -10,7 +10,7 @@ The snake can make only one move in a second and it can move only up, down, righ
 
 Note: For a given wind's direction and the initial position of the snake, there exists only one unique path the snake will take to visit all the cells.
 
-<b>Input Format<b>
+Input Format
 
 In the first line, you will be given an integer  where  represents the length and width of the area in which the snake will move. In the second line, you will be given a single character (n, s, w, or e) which determines the direction towards which the wind blows. In the third line, you will be given the coordinates  of the corner where the snake will start the journey. The upper-left corner has the coordinates  and the lower-right corner has the coordinates .
 
