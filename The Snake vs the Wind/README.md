@@ -34,7 +34,8 @@ Sample Output 0 <br>
 1 2 <br>
 
 Explanation 0 <br>
-<img src="../images/snake_grid_1.png">
+
+<prev     ><img src="../images/snake_grid_1.png">
 
 Sample Input 1 <br>
 
@@ -50,4 +51,5 @@ Sample Output 1 <br>
 16 15 14 13 <br>
 
 Explanation 1 <br>
-<img src="../images/snake_grid_2.png">
+
+<prev     ><img src="../images/snake_grid_2.png">
