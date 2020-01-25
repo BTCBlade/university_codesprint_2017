@@ -35,7 +35,7 @@ Sample Output 0 <br>
 
 Explanation 0 <br>
 
-<emsp><img src="../images/snake_grid_1.png">
+<p><img src="../images/snake_grid_1.png"></p>
 
 Sample Input 1 <br>
 
@@ -52,4 +52,4 @@ Sample Output 1 <br>
 
 Explanation 1 <br>
 
-<emsp><img src="../images/snake_grid_2.png">
+<p><img src="../images/snake_grid_2.png"></p>
