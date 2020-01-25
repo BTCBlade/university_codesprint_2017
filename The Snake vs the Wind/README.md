@@ -16,7 +16,8 @@ In the first line, you will be given an integer  where  represents the length an
 
 Constraints
 
-The snake will always start the journey in one of the four corners of the grid.
+The snake will always start the journey in one of the four corners of the grid. 
+
 Output Format
 
 Print the whole journey of the snake by outputting the time at which the snake is found in each specific part of the area. Have a look at the sample outputs for better understanding.
