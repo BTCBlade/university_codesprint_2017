@@ -18,12 +18,15 @@ In a single line, print the result of the operation.
 Sample Input 0
 
 0+1
+
 Sample Output 0
 
 1
+
 Sample Input 1
 
 0-3
+
 Sample Output 1
 
 -3
