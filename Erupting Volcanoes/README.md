@@ -46,6 +46,7 @@ Sample Input 1 <br>
 Sample Output 1 <br>
 
 4 <br>
+
 Explanation 1 <br>
 
 <img src="../images/evolcano_img3.png">
