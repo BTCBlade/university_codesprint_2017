@@ -1,4 +1,1 @@
-# university_codesprint_2017
-
-    hackerrank practice I did when i was at 42 coding USA
-
+<img src="/images/university_codesprint_2017img1.png">
