@@ -4,7 +4,7 @@ A group of scientists is doing some experiments with a snake. They want to measu
 
 The scientists have seen in their previous experiments that the snake hates the wind so much so that it will try to do its best not to move in the opposite direction of the wind because its eyes are very sensitive to the dust. At any instant, the snake (greedily) prefers to move in the same direction as the wind, or if that is not possible, it would not be a problem even moving perpendicularly to the wind. The snake is very hungry so if it can see that the only possible way to eat more is to move in an opposite way to the direction of the wind, it will sacrifice a bit its eyes for its stomach.
 
-<img src="images/snake_wind_grid.png">
+<img src="../images/snake_wind_grid.png">
 
 The snake can make only one move in a second and it can move only up, down, right or left. Also, it cannot move in a place where it was before since we are dealing with a very long snake. The scientists decided to put the snake in one of the four corners of the area and they want you to give them the movement of the snake for each second of the journey.
 
@@ -26,25 +26,29 @@ Sample Input 0
 2
 e
 1 0
+
 Sample Output 0
 
 4 3 
 1 2
+
 Explanation 0
 
-image
+<img src="snake_grid_1.png">
 
 Sample Input 1
 
 4
 n
 0 0
+
 Sample Output 1
 
 1 2 3 4
 8 7 6 5
 9 10 11 12
 16 15 14 13
+
 Explanation 1
 
-image
+<img src="snake_grid_2.png">
