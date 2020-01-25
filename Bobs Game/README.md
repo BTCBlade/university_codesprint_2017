@@ -1,3 +1,5 @@
+# Bobs Game
+
 Bob recently invented a new game. The game is played on an  chessboard. The rules of the game are:
 
 Initially, there are kings in some of the cells. A cell can contain more than one king.
